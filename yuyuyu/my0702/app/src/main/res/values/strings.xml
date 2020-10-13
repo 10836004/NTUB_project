@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">my0702</string>
+    <string name="title_activity_othersports">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_textlogin">MainActivity</string>
+    <string name="title_activity_infood">infood</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

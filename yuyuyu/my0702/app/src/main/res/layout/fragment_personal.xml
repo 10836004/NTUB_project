@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    tools:context=".PersonalFragment">
+
+       <LinearLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="61dp"
+              android:orientation="vertical">
+
+              <Spinner
+                  android:id="@+id/spinner"
+                  android:layout_width="196dp"
+                  android:layout_height="45dp"
+                  android:layout_gravity="center|center_horizontal|center_vertical" />
+       </LinearLayout>
+
+       <TableRow
+           android:layout_width="match_parent"
+           android:layout_height="161dp">
+
+              <ImageView
+                  android:id="@+id/image_1"
+                  android:layout_width="164dp"
+                  android:layout_height="match_parent"
+                  app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/textView20"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="姓名"
+                         android:textSize="30sp" />
+
+                     <TextView
+                         android:id="@+id/textView21"
+                         android:layout_width="match_parent"
+                         android:layout_height="62dp"
+                         android:text="介紹"
+                         android:textSize="18sp" />
+
+                     <Button
+                         android:id="@+id/button2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="編輯個人介面" />
+              </LinearLayout>
+
+       </TableRow>
+       <com.google.android.material.tabs.TabLayout
+           android:id="@+id/tabBar1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+              <com.google.android.material.tabs.TabItem
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tabmessage1"
+                  android:text="個人分享" />
+
+              <com.google.android.material.tabs.TabItem
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tabmessage2"
+                  android:text="每日飲食" />
+
+
+       </com.google.android.material.tabs.TabLayout>
+
+       <androidx.viewpager.widget.ViewPager
+           android:id="@+id/viewPager1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           />
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".message1Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="135dp">
+
+            <ImageView
+                android:id="@+id/message1image_1"
+                android:layout_width="164dp"
+                android:layout_height="186dp"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+            <TextView
+                android:id="@+id/message1texxxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message1text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心得"
+                    android:textSize="30sp" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/message1sport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="運動"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="時間"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日期" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message1image_2"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心得"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="運動"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message1image_3"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心得"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="運動"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message1image_4"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心得"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="運動"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+    </TableLayout>
+</ScrollView>
+</FrameLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SQLite_insert"
+    android:background="@drawable/underline">
+
+    <EditText
+        android:id="@+id/etusername"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:ems="10"
+        android:fontFamily="@font/kai08mz"
+        android:inputType="textPersonName"
+        android:text="您沒有會員，請按按鈕回登入頁面" />
+
+    <EditText
+        android:id="@+id/edpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="27dp"
+        android:layout_height="14dp"
+        android:text="TextView"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/textView81"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView82"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView83"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="回登入頁面"
+        android:fontFamily="@font/kai08mz"
+        android:textSize="24dp" />
+</LinearLayout>

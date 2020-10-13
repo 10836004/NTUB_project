@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    android:orientation="vertical"
+    tools:context=".Preference">
+
+    <TextView
+        android:id="@+id/n5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/n6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/n7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="400dp"
+        android:layout_height="39dp"
+        android:text="偏好設定："
+        android:textSize="30sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical" >
+         <LinearLayout
+                  android:layout_width="match_parent"
+                   android:layout_height="126dp"
+                    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="基本資料：" />
+
+        <EditText
+            android:id="@+id/hi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="輸入身高"/>
+
+        <EditText
+            android:id="@+id/kgg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="輸入體重" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="運動偏好：" />
+
+        <RadioButton
+            android:id="@+id/doorin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="室內" />
+
+        <RadioButton
+            android:id="@+id/doorout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="室外" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="運動偏好：" />
+
+        <CheckBox
+            android:id="@+id/Slimming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="瘦身" />
+
+        <CheckBox
+            android:id="@+id/fitness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="健身" />
+
+        <CheckBox
+            android:id="@+id/shaping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="塑型" />
+
+        <CheckBox
+            android:id="@+id/spfitness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="增強體質" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="飲食偏好：" />
+
+        <RadioButton
+            android:id="@+id/takeout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="外食" />
+
+        <RadioButton
+            android:id="@+id/takein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自煮" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_preference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="確認" />
+
+    </LinearLayout>
+ </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF6CC"
+    tools:context=".MainActivity"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/n1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/mood3textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kai08mz"
+                android:gravity="top"
+                android:text="三、最後請挑出可以讓你的心情變好的方式!"
+                android:textColor="#050505"
+                android:textSize="30sp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kai08mz"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="417dp"
+            android:background="@drawable/button">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="418dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/three_button01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="1"
+                    android:textSize="30sp" />
+
+
+                <RadioButton
+                    android:id="@+id/three_button02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="2"
+                    android:textSize="30sp" />
+
+                <RadioButton
+                    android:id="@+id/three_button03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="3"
+                    android:textSize="30sp" />
+
+                <RadioButton
+                    android:id="@+id/three_button04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="4"
+                    android:textSize="30sp" />
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView900"
+                    android:layout_width="match_parent"
+                    android:layout_height="108dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="當遇到別人讓我很生氣，我會告訴自己不要理他們就好了"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView910"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="我會把這件開心的事情和朋友分享，記住這件開心的事情。"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView920"
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="我會找有趣的事情去做，讓自己的心情更好一點。"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView930"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="我會自己找一個安靜的地方，自己一個人安靜地玩。"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/mood3_back_button"
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/mood3textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kai08mz"
+                    android:gravity="center"
+                    android:text="上一步"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="94dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/mood3_next_button"
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/redo" />
+
+                <TextView
+                    android:id="@+id/mood3textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kai08mz"
+                    android:gravity="center"
+                    android:text="下一步"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

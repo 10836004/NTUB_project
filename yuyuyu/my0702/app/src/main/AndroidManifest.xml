@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.my0702">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_APN_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="i好心情"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".lougot"></activity>
+        <activity android:name=".updatediary" />
+        <activity android:name=".loginadd" />
+        <activity android:name=".profile2" />
+        <activity android:name=".profile_choice" />
+        <activity android:name=".MainActivity2__login" />
+        <activity android:name=".puzzle_start" />
+        <activity android:name=".puzzle_game" />
+        <activity android:name=".SamplePuzzle" />
+        <activity android:name=".profile" />
+        <activity android:name=".calender" />
+        <activity android:name=".calender_mood" />
+        <activity android:name=".game_choice" />
+        <activity android:name=".i_mood" />
+        <activity android:name=".imood2" />
+        <activity android:name=".imood3" />
+        <activity android:name=".imood4" />
+        <activity android:name=".imood5" />
+        <activity android:name=".i_new" />
+        <activity android:name=".si1" />
+        <activity android:name=".bgw1" />
+        <activity android:name=".sq1" />
+        <activity android:name=".tt111111" />
+        <activity android:name=".changIntroduction" />
+        <activity android:name=".MainActivity_login_sql_text" />
+        <activity android:name=".MainActivity_login" />
+        <activity android:name=".Select_spinner2" />
+        <activity android:name=".Select_spinner1" />
+        <activity android:name=".Main4home_run_eat_personal" />
+        <activity android:name=".Social" />
+        <activity android:name=".foodinside" />
+        <activity android:name=".infood" />
+        <activity android:name=".loginabc" />
+        <activity android:name=".SQLite_insert" />
+        <activity android:name=".sport_start" />
+        <activity
+            android:name=".textlogin"
+            android:label="@string/title_activity_textlogin" />
+        <activity android:name=".food" />
+        <activity android:name=".Othersports" />
+        <activity android:name=".sport" />
+        <activity android:name=".Preference" />
+        <activity android:name=".LoginMain1" />
+        <activity android:name=".LoginMain" />
+        <activity android:name=".SQLite" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

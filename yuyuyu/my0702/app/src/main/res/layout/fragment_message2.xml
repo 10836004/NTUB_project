@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".message2Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message2image_1"
+                android:layout_width="166dp"
+                android:layout_height="161dp"
+                app:srcCompat="@drawable/images__1_" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="菜單"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="卡路里"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message2image_2"
+                android:layout_width="164dp"
+                android:layout_height="161dp"
+                app:srcCompat="@drawable/images__1_" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="菜單"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="卡路里"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message2image_3"
+                android:layout_width="164dp"
+                android:layout_height="161dp"
+                app:srcCompat="@drawable/images__1_" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="菜單"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="卡路里"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/message2image_4"
+                android:layout_width="164dp"
+                android:layout_height="161dp"
+                app:srcCompat="@drawable/images__1_" />
+
+            <LinearLayout
+                android:layout_width="228dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="菜單"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="match_parent"
+                    android:layout_height="121dp"
+                    android:text="卡路里"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+</FrameLayout>
