@@ -313,7 +313,7 @@
 
                         <Button
                             android:id="@+id/btn17"
-                            android:layout_width="133dp"
+                            android:layout_width="136dp"
                             android:layout_height="74dp"
                             android:layout_weight="1"
                             android:background="@drawable/back" />
