@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class imood2 extends AppCompatActivity {
 
@@ -65,25 +66,35 @@ public class imood2 extends AppCompatActivity {
         public void onClick(View view) {
             if (mRadioButton1.isChecked()) {
                 a2 = "1 怒氣沖沖失去理智";
-            } else if(mRadioButton2.isChecked()) {
+            } else if (mRadioButton2.isChecked()) {
                 a2 = "2 憤怒發脾氣";
-            } else if(mRadioButton3.isChecked()) {
+            } else if (mRadioButton3.isChecked()) {
                 a2 = "3 不高興";
-            } else if(mRadioButton4.isChecked()) {
+            } else if (mRadioButton4.isChecked()) {
                 a2 = "4 平靜";
-            } else if(mRadioButton5.isChecked()) {
+            } else if (mRadioButton5.isChecked()) {
                 a2 = "5 開心";
-            } else if(mRadioButton6.isChecked()) {
+            } else if (mRadioButton6.isChecked()) {
                 a2 = "6 興奮";
-            } else if(mRadioButton7.isChecked()) {
+            } else if (mRadioButton7.isChecked()) {
                 a2 = "7 非常快樂";
             }
-            //String result1 = MainActivityloginSQL.executeQuery1(" UPDATE preference SET `sportplace`='\"+a1+\"',`slimming` = '\"+a3+\"',`fitness` = '\"+a4+\"',`shaping` = '\"+a5+\"', strengthen = '\"+a6+\"',`foodplace` = '\"+a2+\"' WHERE account = '\"+mn5.getText().toString()+\"'");
-            String result1 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood2`='"+a2+"' WHERE id = '"+TextView1.getText().toString()+"'");
-            Intent intent = new Intent(imood2.this, imood3.class);
-            intent.putExtra("account", TextView1.getText().toString());//"姓名:"
-            startActivity(intent);
-        }
+            /*
+            else if (a2 == null) {
+
+                Toast toast = Toast.makeText(imood2.this, "請選填一個", Toast.LENGTH_LONG);
+                toast.show();
+
+            } else {
+
+             */
+                //String result1 = MainActivityloginSQL.executeQuery1(" UPDATE preference SET `sportplace`='\"+a1+\"',`slimming` = '\"+a3+\"',`fitness` = '\"+a4+\"',`shaping` = '\"+a5+\"', strengthen = '\"+a6+\"',`foodplace` = '\"+a2+\"' WHERE account = '\"+mn5.getText().toString()+\"'");
+                String result1 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood2`='" + a2 + "' WHERE id = '" + TextView1.getText().toString() + "'");
+                Intent intent = new Intent(imood2.this, imood3.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);
+            }
+
     };
 
 }

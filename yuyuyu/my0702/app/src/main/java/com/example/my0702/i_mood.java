@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.content.Context;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 
@@ -100,31 +101,41 @@ public class i_mood extends AppCompatActivity {
     private View.OnClickListener btnAdd1OnClick01234 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            /*
+            if (mRadioButton1 == null && mRadioButton2 ==null && mRadioButton3 == null && mRadioButton4 == null && mRadioButton5 == null && mRadioButton6 == null && mRadioButton7 == null) {
+
+                Toast toast = Toast.makeText(i_mood.this, "請選填一個", Toast.LENGTH_LONG);
+                toast.show();
+            }
+
+            else*/
             if (mRadioButton1.isChecked()) {
                 a1 = "1 怒氣沖沖失去理智";
-            } else if(mRadioButton2.isChecked()) {
+            } else if (mRadioButton2.isChecked()) {
                 a1 = "2 憤怒發脾氣";
-            } else if(mRadioButton3.isChecked()) {
+            } else if (mRadioButton3.isChecked()) {
                 a1 = "3 不高興";
-            } else if(mRadioButton4.isChecked()) {
+            } else if (mRadioButton4.isChecked()) {
                 a1 = "4 平靜";
-            } else if(mRadioButton5.isChecked()) {
+            } else if (mRadioButton5.isChecked()) {
                 a1 = "5 開心";
-            } else if(mRadioButton6.isChecked()) {
+            } else if (mRadioButton6.isChecked()) {
                 a1 = "6 興奮";
-            } else if(mRadioButton7.isChecked()) {
+            } else if (mRadioButton7.isChecked()) {
                 a1 = "7 非常快樂";
             }
 
 
-            //String result1 = MainActivityloginSQL.executeQuery1("INSERT INTO `test20200901`.`imood` (`imood1`, `imood2`, `imood3`, `imood4`, `imood5`) VALUES ('\" + a1.getText().toString() +)");
-            String result1 = MainActivityloginSQL.executeQuery1("INSERT INTO `test20200901`.`imood` (`id`,`datetime`,`date`,`imood1`) VALUES ('"+TextView1.getText().toString()+"','"+date+"','"+date1+"','"+a1+"')");
 
-            Intent intent = new Intent(i_mood.this, imood2.class);
-            //intent.putExtra("a1", a1.getText().toString());//"姓名:"
-            intent.putExtra("account", TextView1.getText().toString());//"姓名:"
-            startActivity(intent);//跳轉到倒計時頁面
-        }
+                //String result1 = MainActivityloginSQL.executeQuery1("INSERT INTO `test20200901`.`imood` (`imood1`, `imood2`, `imood3`, `imood4`, `imood5`) VALUES ('\" + a1.getText().toString() +)");
+                String result1 = MainActivityloginSQL.executeQuery1("INSERT INTO `test20200901`.`imood` (`id`,`datetime`,`date`,`imood1`) VALUES ('" + TextView1.getText().toString() + "','" + date + "','" + date1 + "','" + a1 + "')");
+
+                Intent intent = new Intent(i_mood.this, imood2.class);
+                //intent.putExtra("a1", a1.getText().toString());//"姓名:"
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);//跳轉到倒計時頁面
+            }
+
     };
 }
 

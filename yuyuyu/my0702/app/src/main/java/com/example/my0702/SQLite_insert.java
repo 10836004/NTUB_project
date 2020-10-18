@@ -29,12 +29,12 @@ public class SQLite_insert extends AppCompatActivity {
         TextView00 .setText(bundle.getString("mmm1"));
         TextView0 .setText(bundle.getString("mmm2"));
         TextView1 .setText(bundle.getString("mm1"));
-        TextView2 .setText(bundle.getString("mm2"));
+        TextView2 .setText(bundle.getString("a11"));
         TextView3 .setText(bundle.getString("mm3"));
         TextView4 .setText(bundle.getString("mm4"));
-        TextView5 .setText(bundle.getString("mm5"));
+        TextView5 .setText(bundle.getString("Spinner"));
         TextView6 .setText(bundle.getString("mm6"));
-        TextView7 .setText(bundle.getString("mm7"));
+        TextView7 .setText(bundle.getString("a12"));
         TextView8 .setText(bundle.getString("mm8"));
         String type = "SQLite_insert";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);

@@ -22,6 +22,11 @@
             android:layout_height="wrap_content"
             android:visibility="gone"/>
         <TextView
+            android:id="@+id/n3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
             android:id="@+id/TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,6 +75,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:hint="王小明"
+                    android:maxLength="4"
                     android:ems="10" />
             </LinearLayout>
 
@@ -81,23 +87,41 @@
 
                 <TextView
                     android:id="@+id/textView88"
-                    android:layout_width="157dp"
-                    android:layout_height="35dp"
+                    android:layout_width="128dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:text="性別："
 
                     android:textSize="24sp" />
 
-                <EditText
-                    android:id="@+id/sex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="61dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/kai08mz"
-                    android:hint="男 或 女"
-                    android:ems="10" />
+                <RadioGroup
+                    android:layout_width="250dp"
+                    android:layout_height="46dp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
 
+                    <RadioButton
+                        android:id="@+id/boy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="男"
+                        android:fontFamily="@font/kai08mz"
+                        android:checked="true"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/girl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="女"
+                        android:fontFamily="@font/kai08mz"
+                        android:textSize="18sp" />
+
+
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -108,7 +132,7 @@
 
                 <TextView
                     android:id="@+id/textView56"
-                    android:layout_width="170dp"
+                    android:layout_width="136dp"
                     android:layout_height="36dp"
                     android:fontFamily="@font/kai08mz"
                     android:text="E-mail："
@@ -133,7 +157,7 @@
 
                 <TextView
                     android:id="@+id/textView57"
-                    android:layout_width="284dp"
+                    android:layout_width="351dp"
                     android:layout_height="45dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
@@ -145,10 +169,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/kai08mz"
-                    android:hint="2004/01/23"
                     android:ems="10"
+                    android:fontFamily="@font/kai08mz"
+                    android:hint="按右邊按鈕"
                     android:inputType="date" />
+
+                <Button
+                    android:id="@+id/btnDate"
+                    android:layout_width="178dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/date1234"
+                    android:fontFamily="@font/kai08mz"
+                    android:layout_gravity=""
+                    android:onClick="datePicker"
+                    android:text="" />
             </LinearLayout>
 
             <LinearLayout
@@ -158,21 +193,21 @@
 
                 <TextView
                     android:id="@+id/textView58"
-                    android:layout_width="287dp"
+                    android:layout_width="396dp"
                     android:layout_height="43dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:text="就讀年級："
                     android:textSize="24sp" />
 
-                <EditText
-                    android:id="@+id/claasss"
-                    android:layout_width="wrap_content"
+
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
-                    android:hint="一年級"
-                    android:ems="10" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -196,6 +231,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="王大明"
+                    android:maxLength="4"
                     android:fontFamily="@font/kai08mz"
                     android:inputType="textPersonName" />
 
@@ -208,22 +244,41 @@
 
                 <TextView
                     android:id="@+id/textView13"
-                    android:layout_width="178dp"
+                    android:layout_width="96dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:text="稱謂："
                     android:textSize="24sp" />
 
-                <EditText
-                    android:id="@+id/nickname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="爸爸 或 媽媽"
-                    android:fontFamily="@font/kai08mz"
-                    android:inputType="textPersonName" />
+
+                <RadioGroup
+                    android:layout_width="250dp"
+                    android:layout_height="46dp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/dad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="爸爸"
+                        android:fontFamily="@font/kai08mz"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/mom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="媽媽"
+                        android:checked="true"
+                        android:fontFamily="@font/kai08mz"
+                        android:textSize="18sp" />
+
+
+                </RadioGroup>
             </LinearLayout>
 
                 <LinearLayout
@@ -248,6 +303,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="0912345678"
+                        android:maxLength="10"
                         android:fontFamily="@font/kai08mz"
                         android:inputType="phone" />
 

@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Button loginbtn = findViewById(R.id.buttonlogin);
         loginbtn.setOnClickListener(loginbtnOnClick);
 */
+
         buttonlogout= (Button) findViewById(R.id.buttonlogout);//把UI介面的東西叫過來
         button1 = (Button) findViewById(R.id.button7);//把UI介面的東西叫過來
 

@@ -16,9 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+
+
+
+
+
+
         android:usesCleartextTraffic="true">
         <activity android:name=".lougot"></activity>
         <activity android:name=".updatediary" />
+        <activity android:name=".GameMood" />
         <activity android:name=".loginadd" />
         <activity android:name=".profile2" />
         <activity android:name=".profile_choice" />
@@ -52,6 +59,10 @@
         <activity android:name=".loginabc" />
         <activity android:name=".SQLite_insert" />
         <activity android:name=".sport_start" />
+
+        <service
+            android:name=".MusicService"
+            android:enabled="true" />
         <activity
             android:name=".textlogin"
             android:label="@string/title_activity_textlogin" />

@@ -77,7 +77,8 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:text="4 "
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:checked="true"/>
 
                 <RadioButton
                     android:id="@+id/btn_bad2"

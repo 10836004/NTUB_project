@@ -31,7 +31,7 @@ public class s_q_lite1 extends AppCompatActivity {
         mmm1 = findViewById(R.id.name);
         mmm2 = findViewById(R.id.Email1);
         mmm3 = findViewById(R.id.bird);
-        mmm4 = findViewById(R.id.claasss);
+        //mmm4 = findViewById(R.id.claasss);
         Button btn1 = findViewById(R.id.button4321);
         btn1.setOnClickListener(btnAdd1OnClick1);
 
@@ -60,7 +60,7 @@ public class s_q_lite1 extends AppCompatActivity {
             intent.putExtra("mmm1",  mmm1.getText().toString());        //傳入點選事件之項目
             intent.putExtra("mmm2",  mmm2.getText().toString());
             intent.putExtra("mmm3", mmm3.getText().toString());
-            intent.putExtra("mmm4",  mmm4.getText().toString());
+            //intent.putExtra("mmm4",  mmm4.getText().toString());
 
 
             startActivity(intent);//跳轉到倒計時頁面

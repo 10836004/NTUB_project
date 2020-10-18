@@ -69,6 +69,7 @@
                 android:ems="10"
                 android:fontFamily="@font/kai08mz"
                 android:hint="自已的學號"
+                android:maxLength="10"
                 android:inputType="number" />
         </LinearLayout>
 
@@ -96,6 +97,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/kai08mz"
                 android:hint="自己記得住的號碼"
+                android:maxLength="15"
                 android:ems="10"
                 android:inputType="textPassword" />
 

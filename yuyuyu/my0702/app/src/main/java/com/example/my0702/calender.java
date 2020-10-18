@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class calender extends AppCompatActivity {
     private TextView TextView1,TextView2;
@@ -80,30 +81,38 @@ public class calender extends AppCompatActivity {
 
             if (mRadioButton1.isChecked()) {
                 ad = "家人";
-            } else if(mRadioButton2.isChecked()) {
+            } else if (mRadioButton2.isChecked()) {
                 ad = "同學/朋友";
-            } else if(mRadioButton3.isChecked()) {
+            } else if (mRadioButton3.isChecked()) {
                 ad = "老師";
             }
 
 
-
-            if(mRadioButton4.isChecked()) {
+            if (mRadioButton4.isChecked()) {
                 ae = "早上";
-            } else if(mRadioButton5.isChecked()) {
+            } else if (mRadioButton5.isChecked()) {
                 ae = "中午";
-            } else if(mRadioButton6.isChecked()) {
+            } else if (mRadioButton6.isChecked()) {
                 ae = "下午";
-            } else if(mRadioButton7.isChecked()) {
+            } else if (mRadioButton7.isChecked()) {
                 ae = "晚上";
             }
-            //String result1 = MainActivityloginSQL.executeQuery1(" UPDATE preference SET `sportplace`='\"+a1+\"',`slimming` = '\"+a3+\"',`fitness` = '\"+a4+\"',`shaping` = '\"+a5+\"', strengthen = '\"+a6+\"',`foodplace` = '\"+a2+\"' WHERE account = '\"+mn5.getText().toString()+\"'");
-            String result1 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `person`='"+ad+"' WHERE id = '"+TextView1.getText().toString()+"'");
-            String result2 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `time`='"+ae+"' WHERE id = '"+TextView1.getText().toString()+"'");
-            String result3 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `diary`='"+TextView2.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
-            Intent intent = new Intent(calender.this, MainActivity.class);
-            intent.putExtra("account", TextView1.getText().toString());//"姓名:"
-            startActivity(intent);//跳轉到倒計時頁面
+
+            if (TextView2.getText().toString().matches("")) {
+
+
+                Toast toast = Toast.makeText(calender.this, "日記欄位空白，按旁邊隨機按鈕參考一下吧", Toast.LENGTH_LONG);
+                toast.show();
+
+            } else {
+                //String result1 = MainActivityloginSQL.executeQuery1(" UPDATE preference SET `sportplace`='\"+a1+\"',`slimming` = '\"+a3+\"',`fitness` = '\"+a4+\"',`shaping` = '\"+a5+\"', strengthen = '\"+a6+\"',`foodplace` = '\"+a2+\"' WHERE account = '\"+mn5.getText().toString()+\"'");
+                String result1 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `person`='" + ad + "' WHERE id = '" + TextView1.getText().toString() + "'");
+                String result2 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `time`='" + ae + "' WHERE id = '" + TextView1.getText().toString() + "'");
+                String result3 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `diary`='" + TextView2.getText().toString() + "' WHERE id = '" + TextView1.getText().toString() + "'");
+                Intent intent = new Intent(calender.this, MainActivity.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);//跳轉到倒計時頁面
+            }
         }
     };
     private View.OnClickListener buttonback= new View.OnClickListener() {

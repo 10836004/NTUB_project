@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class imood3 extends AppCompatActivity {
@@ -49,19 +50,29 @@ public class imood3 extends AppCompatActivity {
         public void onClick(View view) {
             if (mRadioButton1.isChecked()) {
                 a3 = "1 遇到別人讓我很生氣，我會告訴自己不要理他們就好了";
-            } else if(mRadioButton2.isChecked()) {
+            } else if (mRadioButton2.isChecked()) {
                 a3 = "2 我會把這件開心的事情和朋友分享，記住這件開心的事情。";
-            } else if(mRadioButton3.isChecked()) {
+            } else if (mRadioButton3.isChecked()) {
                 a3 = "3 我會找有趣的事情去做，讓自己的心情更好一點。";
-            } else if(mRadioButton4.isChecked()) {
+            } else if (mRadioButton4.isChecked()) {
                 a3 = "4 我會自己找一個安靜的地方，自己一個人安靜地玩。";
             }
-            //String result1 = MainActivityloginSQL.executeQuery1(" UPDATE preference SET `sportplace`='\"+a1+\"',`slimming` = '\"+a3+\"',`fitness` = '\"+a4+\"',`shaping` = '\"+a5+\"', strengthen = '\"+a6+\"',`foodplace` = '\"+a2+\"' WHERE account = '\"+mn5.getText().toString()+\"'");
-            String result1 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood3`='"+a3+"' WHERE id = '"+TextView1.getText().toString()+"'");
-            Intent intent = new Intent(imood3.this, imood4.class);
-            intent.putExtra("account", TextView1.getText().toString());//"姓名:"
-            startActivity(intent);
-        }
+            /*
+            else if (a3 == null) {
+
+                Toast toast = Toast.makeText(imood3.this, "請選填一個", Toast.LENGTH_LONG);
+                toast.show();
+
+            } else {
+
+             */
+                //String result1 = MainActivityloginSQL.executeQuery1(" UPDATE preference SET `sportplace`='\"+a1+\"',`slimming` = '\"+a3+\"',`fitness` = '\"+a4+\"',`shaping` = '\"+a5+\"', strengthen = '\"+a6+\"',`foodplace` = '\"+a2+\"' WHERE account = '\"+mn5.getText().toString()+\"'");
+                String result1 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood3`='" + a3 + "' WHERE id = '" + TextView1.getText().toString() + "'");
+                Intent intent = new Intent(imood3.this, imood4.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);
+            }
+
     };
 }
 
