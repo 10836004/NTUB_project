@@ -1,4 +1,3 @@
-/*
 package com.example.my0702;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,4 +36,3 @@ public class SQLite_insert1 extends AppCompatActivity  {
         startActivity(i);
     }
 }
-*/
