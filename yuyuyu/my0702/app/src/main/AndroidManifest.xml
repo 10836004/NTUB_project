@@ -23,7 +23,6 @@
 
 
         android:usesCleartextTraffic="true">
-        <activity android:name=".lougot"></activity>
         <activity android:name=".updatediary" />
         <activity android:name=".GameMood" />
         <activity android:name=".loginadd" />
@@ -47,18 +46,9 @@
         <activity android:name=".bgw1" />
         <activity android:name=".sq1" />
         <activity android:name=".tt111111" />
-        <activity android:name=".changIntroduction" />
         <activity android:name=".MainActivity_login_sql_text" />
-        <activity android:name=".MainActivity_login" />
-        <activity android:name=".Select_spinner2" />
-        <activity android:name=".Select_spinner1" />
-        <activity android:name=".Main4home_run_eat_personal" />
-        <activity android:name=".Social" />
-        <activity android:name=".foodinside" />
-        <activity android:name=".infood" />
         <activity android:name=".loginabc" />
         <activity android:name=".SQLite_insert" />
-        <activity android:name=".sport_start" />
 
         <service
             android:name=".MusicService"
@@ -66,12 +56,6 @@
         <activity
             android:name=".textlogin"
             android:label="@string/title_activity_textlogin" />
-        <activity android:name=".food" />
-        <activity android:name=".Othersports" />
-        <activity android:name=".sport" />
-        <activity android:name=".Preference" />
-        <activity android:name=".LoginMain1" />
-        <activity android:name=".LoginMain" />
         <activity android:name=".SQLite" />
         <activity
             android:name=".SplashScreen"

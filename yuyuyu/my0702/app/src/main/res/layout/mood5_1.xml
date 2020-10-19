@@ -6,139 +6,142 @@
     android:layout_height="match_parent"
     android:background="#FFF6CC">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/xiao"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="1dp">
-
-        <TextView
-            android:id="@+id/textView42"
-            android:layout_width="match_parent"
-            android:layout_height="104dp" />
-
-        <TextView
-            android:id="@+id/textView45"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kai08mz"
-            android:text="四、如何讓自己變得更好"
-            android:textColor="#000000"
-            android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="204dp"
-            app:srcCompat="@drawable/divertido" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button">
-
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="match_parent"
-                android:layout_height="77dp"
-                android:fontFamily="@font/kai08mz"
-                android:text="(1)我非常開心，已經開心到頂點了，我會和朋友分享，記住這件開心的事情。"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:fontFamily="@font/kai08mz"
-                android:text="(2)我會把這件開心的事情和朋友分享，記住這件開心的事情。"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:fontFamily="@font/kai08mz"
-                android:text="(3)我會找有趣的事情，讓自己的心情更好一點"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" /><![CDATA[
-
-            />
-        ]]>
-        </RadioGroup>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/xiao"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="104dp" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kai08mz"
+                android:text="四、如何讓自己變得更好"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_height="204dp"
+                app:srcCompat="@drawable/divertido" />
 
-                <Button
-                    android:id="@+id/mood4_back_button"
-                    android:layout_width="109dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/back" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button">
 
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
                     android:fontFamily="@font/kai08mz"
-                    android:gravity="center"
-                    android:text="上一步"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:text="(1)我非常開心，已經開心到頂點了，我會和朋友分享，記住這件開心的事情。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="(2)我會把這件開心的事情和朋友分享，記住這件開心的事情。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="(3)我會找有趣的事情，讓自己的心情更好一點"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" /><![CDATA[
+
+                />
+            ]]>
+            </RadioGroup>
 
             <LinearLayout
-                android:layout_width="170dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView46"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/mood4_next_button"
-                    android:layout_width="109dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/redo" />
-
-                <TextView
-                    android:id="@+id/textView19"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/kai08mz"
                     android:gravity="center"
-                    android:text="下一步"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:orientation="vertical">
 
-    </LinearLayout>
+                    <Button
+                        android:id="@+id/mood4_back_button"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/back" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="上一步"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/mood4_next_button"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/redo" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="下一步"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

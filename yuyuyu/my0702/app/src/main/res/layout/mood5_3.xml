@@ -6,124 +6,128 @@
     android:layout_height="match_parent"
     android:background="#FFF6CC">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:background="@drawable/xiao"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
-        <TextView
-            android:id="@+id/textView35"
-            android:layout_width="match_parent"
-            android:layout_height="105dp" />
-
-        <TextView
-            android:id="@+id/textView37"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kai08mz"
-            android:text="四、怎麼樣才可以轉換心情"
-            android:textColor="#000000"
-            android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="219dp"
-            app:srcCompat="@drawable/family" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button">
-
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="match_parent"
-                android:layout_height="92dp"
-                android:fontFamily="@font/kai08mz"
-                android:text="(1)不快樂的時候，我會去想自己想做的事情，讓自己心情好一點。"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-            <RadioButton
-                android:id="@+id/radioButton7"
-                android:layout_width="match_parent"
-                android:layout_height="83dp"
-                android:fontFamily="@font/kai08mz"
-                android:text="(2)我會去想以前發生過的快樂事情，讓自己的心情好一點。"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-        </RadioGroup>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xiao"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
-            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="105dp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kai08mz"
+                android:text="四、怎麼樣才可以轉換心情"
+                android:textColor="#000000"
+                android:textSize="24sp" />
 
-                <Button
-                    android:id="@+id/mood4_back_button"
-                    android:layout_width="109dp"
-                    android:layout_height="117dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/back" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="219dp"
+                app:srcCompat="@drawable/family" />
 
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button">
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
                     android:fontFamily="@font/kai08mz"
-                    android:gravity="center"
-                    android:text="上一步"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:text="(1)不快樂的時候，我會去想自己想做的事情，讓自己心情好一點。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="match_parent"
+                    android:layout_height="83dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="(2)我會去想以前發生過的快樂事情，讓自己的心情好一點。"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </RadioGroup>
 
             <LinearLayout
-                android:layout_width="116dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView46"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/mood4_next_button"
-                    android:layout_width="109dp"
-                    android:layout_height="117dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redo" />
-
-                <TextView
-                    android:id="@+id/textView19"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/kai08mz"
                     android:gravity="center"
-                    android:text="下一步"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:orientation="vertical">
 
-    </LinearLayout>
+                    <Button
+                        android:id="@+id/mood4_back_button"
+                        android:layout_width="109dp"
+                        android:layout_height="117dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/back" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="上一步"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/mood4_next_button"
+                        android:layout_width="109dp"
+                        android:layout_height="117dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/redo" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="下一步"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
