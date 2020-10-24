@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //取得傳遞過來的資料
         Intent intent = getIntent();
+        TextView textView1 = (TextView) findViewById(R.id.text_mood);
+        TextView textView2 = (TextView) findViewById(R.id.text_calendar);
+        TextView textView3 = (TextView) findViewById(R.id.text_game);
+        TextView textView4 = (TextView) findViewById(R.id.text_profile);
         Bundle bundle = intent.getExtras();
         String loginname = bundle.getString("account");
         TextView1 = findViewById(R.id.textView5);
@@ -55,6 +59,43 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);//訪客登入執行跳頁
             }
         });*/
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, i_mood.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);//跳轉至溫度計頁面
+            }
+        });
+
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, calender_mood.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);//跳轉至心情日記
+            }
+        });
+
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, game_choice.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);//跳轉至遊戲區
+            }
+        });
+
+        textView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, profile.class);
+                intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+                startActivity(intent);//跳轉至個人專區
+            }
+        });
+
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

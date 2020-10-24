@@ -52,7 +52,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="68dp"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
@@ -217,6 +217,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="上一步"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
                 </LinearLayout>
 
@@ -253,6 +254,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="下一步"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
                 </LinearLayout>
             </LinearLayout>

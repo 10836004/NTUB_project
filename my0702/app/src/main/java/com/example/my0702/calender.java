@@ -22,6 +22,7 @@ public class calender extends AppCompatActivity {
     private String aa;
     int oldVaue;
     private RadioButton
+            mRadioButton0,
             mRadioButton1,
             mRadioButton2,
             mRadioButton3,
@@ -45,6 +46,7 @@ public class calender extends AppCompatActivity {
         btn1111 = findViewById(R.id.game_next_button);
         btn0000.setOnClickListener(buttonback);
         btn1111.setOnClickListener(btnAdd1OnClick123456);
+        mRadioButton0 = findViewById(R.id.radioButtonpersonal);
         mRadioButton1 = findViewById(R.id.radioButton13);
         mRadioButton2 = findViewById(R.id.radioButton12);
         mRadioButton3 = findViewById(R.id.radioButton11);
@@ -78,8 +80,9 @@ public class calender extends AppCompatActivity {
     private View.OnClickListener btnAdd1OnClick123456 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
-            if (mRadioButton1.isChecked()) {
+            if (mRadioButton0.isChecked()) {
+                ad = "自己";
+            } else if (mRadioButton1.isChecked()) {
                 ad = "家人";
             } else if (mRadioButton2.isChecked()) {
                 ad = "同學/朋友";

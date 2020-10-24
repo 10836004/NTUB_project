@@ -58,11 +58,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="417dp"
-                android:background="@drawable/button">
+                android:layout_height="430dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal">
 
                 <RadioGroup
-                    android:layout_width="wrap_content"
+                    android:layout_width="64dp"
                     android:layout_height="418dp"
                     android:orientation="vertical">
 
@@ -110,6 +112,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
@@ -117,7 +120,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="108dp"
                         android:fontFamily="@font/kai08mz"
+                        android:gravity="left|center_vertical"
                         android:text="當遇到別人讓我很生氣，我會告訴自己不要理他們就好了"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
 
                     <TextView
@@ -125,7 +130,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:fontFamily="@font/kai08mz"
+                        android:gravity="left|center_vertical"
                         android:text="我會把這件開心的事情和朋友分享，記住這件開心的事情。"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
 
                     <TextView
@@ -133,7 +140,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="104dp"
                         android:fontFamily="@font/kai08mz"
+                        android:gravity="left|center_vertical"
                         android:text="我會找有趣的事情去做，讓自己的心情更好一點。"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
 
                     <TextView
@@ -141,7 +150,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="101dp"
                         android:fontFamily="@font/kai08mz"
+                        android:gravity="left|center_vertical"
                         android:text="我會自己找一個安靜的地方，自己一個人安靜地玩。"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
 
                 </LinearLayout>
@@ -151,7 +162,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="97dp"
+                android:layout_height="127dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -176,6 +187,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="上一步"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
                 </LinearLayout>
 
@@ -212,6 +224,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="下一步"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
                 </LinearLayout>
             </LinearLayout>

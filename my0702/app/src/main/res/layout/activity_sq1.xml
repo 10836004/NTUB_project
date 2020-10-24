@@ -8,7 +8,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -38,7 +42,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="619dp"
                 android:layout_gravity="center"
                 android:background="@drawable/registered_1"
                 android:orientation="vertical"
@@ -122,17 +126,24 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="91dp"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="160dp"
                         android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <Button
                             android:id="@+id/btn6666"
-                            android:layout_width="136dp"
+                            android:layout_width="match_parent"
                             android:layout_height="84dp"
                             android:layout_weight="1"
                             android:background="@drawable/back1" />
@@ -140,10 +151,11 @@
                         <TextView
                             android:id="@+id/textView60"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="wrap_content"
                             android:fontFamily="@font/kai08mz"
                             android:gravity="center_horizontal"
-                            android:text="上一頁"
+                            android:text="上一步"
+                            android:textColor="#020202"
                             android:textSize="30sp" />
 
 
@@ -159,26 +171,29 @@
                     <LinearLayout
                         android:layout_width="160dp"
                         android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <Button
                             android:id="@+id/button4321"
-                            android:layout_width="136dp"
-                            android:layout_height="92dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="106dp"
                             android:background="@drawable/next" />
 
                         <TextView
                             android:id="@+id/textView63"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:fontFamily="@font/kai08mz"
                             android:gravity="center_horizontal"
                             android:text="下一步"
+                            android:textColor="#020202"
                             android:textSize="30dp" />
 
 
                     </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>

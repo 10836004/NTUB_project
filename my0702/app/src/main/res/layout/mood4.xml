@@ -71,31 +71,31 @@
                     android:orientation="vertical">
 
                     <RadioButton
-                        android:id="@+id/four_button01"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/four_button07"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
-                        android:text="1"
+                        android:text="7"
                         android:textSize="30sp" />
 
-
                     <RadioButton
-                        android:id="@+id/four_button02"
+                        android:id="@+id/four_button06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
-                        android:text="2"
+                        android:text="6"
                         android:textSize="30sp" />
 
                     <RadioButton
-                        android:id="@+id/four_button03"
+                        android:id="@+id/four_button05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
-                        android:text="3"
+                        android:text="5"
                         android:textSize="30sp" />
 
                     <RadioButton
@@ -109,32 +109,32 @@
                         android:textSize="30sp" />
 
                     <RadioButton
-                        android:id="@+id/four_button05"
+                        android:id="@+id/four_button03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
-                        android:text="5"
+                        android:text="3"
                         android:textSize="30sp" />
 
                     <RadioButton
-                        android:id="@+id/four_button06"
+                        android:id="@+id/four_button02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
-                        android:text="6"
+                        android:text="2"
                         android:textSize="30sp" />
 
                     <RadioButton
-                        android:id="@+id/four_button07"
-                        android:layout_width="match_parent"
+                        android:id="@+id/four_button01"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
-                        android:text="7"
+                        android:text="1"
                         android:textSize="30sp" />
+
 
                 </RadioGroup>
 
@@ -144,48 +144,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView991"
+                        android:id="@+id/textView997"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
-                        android:text="怒氣沖沖失去理智"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView992"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/kai08mz"
-                        android:gravity="center"
-                        android:text="憤怒發脾氣"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView993"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/kai08mz"
-                        android:gravity="center"
-                        android:text="不高興"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView994"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/kai08mz"
-                        android:gravity="center"
-                        android:text="平靜"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView995"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:fontFamily="@font/kai08mz"
-                        android:gravity="center"
-                        android:text="開心"
+                        android:text="非常快樂"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
 
                     <TextView
@@ -195,16 +160,59 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="興奮"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
 
                     <TextView
-                        android:id="@+id/textView997"
+                        android:id="@+id/textView995"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
-                        android:text="非常快樂"
+                        android:text="開心"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView994"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="平靜"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView993"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="不高興"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView992"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="憤怒發脾氣"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/textView991"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/kai08mz"
+                        android:gravity="center"
+                        android:text="怒氣沖沖失去理智"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -237,6 +245,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="上一步"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
                 </LinearLayout>
 
@@ -273,6 +282,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="下一步"
+                        android:textColor="#000000"
                         android:textSize="24sp" />
                 </LinearLayout>
             </LinearLayout>

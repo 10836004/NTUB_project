@@ -17,7 +17,7 @@
             android:layout_marginLeft="55dp"
             android:layout_marginTop="230dp"
             android:src="@drawable/i_new"
-            tools:srcCompat="@drawable/i_new" />
+            tools:srcCompat="@drawable/imood" />
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
