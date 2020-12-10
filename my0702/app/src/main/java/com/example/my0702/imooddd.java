@@ -66,7 +66,7 @@ public class imooddd extends AppCompatActivity {
                 final LinearLayout itemMain = new LinearLayout(this);
                 itemMain.setId(Integer.parseInt(jsonData.getString("idid")));
                 itemMain.setOrientation(LinearLayout.HORIZONTAL); //設定linearLayout是橫向還是豎各
-                LinearLayout.LayoutParams itemMainparams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dip2px(this, 100)); //設定寬與高
+                LinearLayout.LayoutParams itemMainparams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dip2px(this, 170)); //設定寬與高
                 itemMainparams.setMargins(0,dip2px(this,14),0,0); //設定每個item與上一個控制元件的間隔是1dip
                 itemMain.setLayoutParams(itemMainparams);
                 itemMain.setBackgroundColor(Color.parseColor("#B088FF")); //設定背景色
@@ -86,7 +86,7 @@ public class imooddd extends AppCompatActivity {
                 //設定中間文字顯示LinearLayout
                 LinearLayout itemtext = new LinearLayout(this);
                 itemtext.setOrientation(LinearLayout.VERTICAL);
-                LinearLayout.LayoutParams itemtextparams = new LinearLayout.LayoutParams(250, dip2px(this, 150), 1);
+                LinearLayout.LayoutParams itemtextparams = new LinearLayout.LayoutParams(250, dip2px(this, 250),1);
                 itemtext.setLayoutParams(itemtextparams);
                 itemtext.setVerticalGravity(Gravity.CENTER_VERTICAL);
                 TextView txtOne = new TextView(this);

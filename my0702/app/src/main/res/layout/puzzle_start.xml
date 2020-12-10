@@ -102,8 +102,8 @@
 
                 <TextView
                     android:id="@+id/textView79"
-                    android:layout_width="205dp"
-                    android:layout_height="29dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"
                     android:text="開始遊戲"
@@ -125,7 +125,7 @@
 
                 <TextView
                     android:id="@+id/textView60"
-                    android:layout_width="152dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"

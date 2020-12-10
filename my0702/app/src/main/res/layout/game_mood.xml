@@ -26,7 +26,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/kai08mz"
                 android:text="哪些是愉快的心情呢?"
                 android:textColor="#000000"
                 android:textSize="36sp" />
@@ -353,11 +354,12 @@
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:text="總分 : 0"
+                android:layout_height="match_parent"
+                android:textSize="36sp"
+                android:fontFamily="@font/kai08mz"
                 android:textColor="#000000"
-                android:textSize="36sp" />
+                android:layout_weight="1"
+                android:text="總分：0"/>
         </LinearLayout>
 
         <LinearLayout
