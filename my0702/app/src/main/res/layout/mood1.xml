@@ -9,81 +9,103 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFF6CC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginBottom="16dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="163dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/n1"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" />
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView10"
-                    style="@android:style/Widget.TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:fontFamily="@font/kai08mz"
-                    android:text="一、心情溫度計"
-                    android:textColor="#000000"
-                    android:textColorHint="#FFFFFF"
-                    android:textSize="42sp"
-                    android:typeface="sans" />
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/kai08mz"
-                    android:gravity="center"
-                    android:text="選擇出您現在的心情"
-                    android:textColor="#7E7E7E"
-                    android:textSize="30sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView11"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/kai08mz"
-                        android:gravity="center"
-                        android:text="1是心情非常不快樂"
-                        android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/kai08mz"
-                        android:gravity="center"
-                        android:textColor="#000000"
-                        android:textSize="24sp"
-                        android:text="7是心情非常快樂" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/n1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            style="@android:style/Widget.TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="26sp"
+                            android:fontFamily="@font/kai08mz"
+                            android:text="一、心情溫度計"
+                            android:textColor="#000000"
+                            android:textColorHint="#FFFFFF"
+                            android:textSize="30sp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/kai08mz"
+                            android:text="請在下列選擇出你現在的心情"
+                            android:textColor="#7E7E7E"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/kai08mz"
+                                android:gravity="center"
+                                android:text='1是心情非常"不快樂"'
+                                android:textColor="#000000"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/kai08mz"
+                                android:gravity="center"
+                                android:text='7是心情非常"快樂"'
+                                android:textColor="#000000"
+                                android:textSize="22sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="417dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
                 android:background="@drawable/button">
 
                 <RadioGroup
@@ -97,9 +119,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
+                        android:checked="true"
                         android:fontFamily="@font/kai08mz"
                         android:text="7"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/one_button06"
@@ -108,7 +131,7 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="6"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/one_button05"
@@ -117,17 +140,16 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="5"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/one_button04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:checked="true"
                         android:fontFamily="@font/kai08mz"
                         android:text="4"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/one_button03"
@@ -136,7 +158,7 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="3"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/one_button02"
@@ -145,16 +167,17 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="2"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/one_button01"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
+
                         android:fontFamily="@font/kai08mz"
                         android:text="1"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
 
                 </RadioGroup>
@@ -182,7 +205,7 @@
                         android:gravity="center"
                         android:text="興奮"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                     <TextView
                         android:id="@+id/textView95"
@@ -192,7 +215,7 @@
                         android:gravity="center"
                         android:text="開心"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                     <TextView
                         android:id="@+id/textView94"
@@ -202,7 +225,7 @@
                         android:gravity="center"
                         android:text="平靜"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                     <TextView
                         android:id="@+id/textView93"
@@ -212,7 +235,7 @@
                         android:gravity="center"
                         android:text="不高興"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                     <TextView
                         android:id="@+id/textView92"
@@ -222,7 +245,7 @@
                         android:gravity="center"
                         android:text="憤怒發脾氣"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                     <TextView
                         android:id="@+id/textView90"
@@ -232,7 +255,7 @@
                         android:gravity="center"
                         android:text="怒氣沖沖失去理智"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                 </LinearLayout>
 

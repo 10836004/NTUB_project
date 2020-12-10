@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF6CC"
     android:orientation="vertical"
     tools:context=".SQLite_insert">
 
@@ -38,20 +39,22 @@
         android:id="@+id/textView800"
         android:layout_width="27dp"
         android:layout_height="14dp"
-        android:text="TextView"
-       />
+        android:text="TextView" />
+
     <TextView
         android:id="@+id/textView8001"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:text="TextView" />
+
     <TextView
         android:id="@+id/textView8002"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:text="TextView" />
+
     <TextView
         android:id="@+id/textView8003"
         android:layout_width="match_parent"
@@ -87,6 +90,6 @@
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:onClick="OnLogin"/>
+        android:onClick="OnLogin"
+        android:text="Button" />
 </LinearLayout>

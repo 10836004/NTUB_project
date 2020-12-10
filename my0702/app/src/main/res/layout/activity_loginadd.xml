@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF6CC"
     android:orientation="vertical"
-    tools:context=".SQLite_insert"
-    android:background="@drawable/underline">
+    tools:context=".SQLite_insert">
 
     <EditText
         android:id="@+id/etusername"
@@ -31,30 +31,33 @@
         android:layout_height="14dp"
         android:text="TextView"
         android:visibility="gone" />
+
     <TextView
         android:id="@+id/textView81"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/textView82"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/textView83"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="回登入頁面"
         android:fontFamily="@font/kai08mz"
+        android:text="回登入頁面"
         android:textSize="24dp" />
 </LinearLayout>
