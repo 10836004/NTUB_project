@@ -70,7 +70,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_weight="0.1"
                     android:scaleType="fitXY"
-                    android:src="@drawable/chart1234" />
+                    android:src="@drawable/moods" />
 
                 <ImageButton
                     android:id="@+id/profile3"
@@ -95,7 +95,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"
-                    android:text="心情溫度計圓餅圖表"
+                    android:text="查看測試過心情溫度計"
                     android:textColor="#040404"
                     android:textSize="24sp" />
 
