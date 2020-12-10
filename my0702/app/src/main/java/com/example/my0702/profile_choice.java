@@ -50,7 +50,7 @@ public class profile_choice extends AppCompatActivity {
         public void onClick(View view) {
 
 
-            Intent intent = new Intent(profile_choice.this, imooddd.class);
+            Intent intent = new Intent(profile_choice.this, profile.class);
             intent.putExtra("account", TextView1.getText().toString());//"姓名:"
             startActivity(intent);//跳轉到倒計時頁面
         }
@@ -61,7 +61,7 @@ public class profile_choice extends AppCompatActivity {
         public void onClick(View view) {
 
 
-            Intent intent = new Intent(profile_choice.this, updatedd.class);
+            Intent intent = new Intent(profile_choice.this, updatediary.class);
             intent.putExtra("account", TextView1.getText().toString());//"姓名:"
             startActivity(intent);//跳轉到倒計時頁面
         }
