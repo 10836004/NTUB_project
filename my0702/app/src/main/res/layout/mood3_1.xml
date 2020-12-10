@@ -45,6 +45,7 @@
                     android:fontFamily="@font/kai08mz"
                     android:text="我會大聲哭很久"
                     android:textColor="#040404"
+                    android:checked="true"
                     android:textSize="20sp" />
 
                 <RadioButton

@@ -9,6 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:background="#FFF6CC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,9 +19,10 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+
             android:background="#FFF6CC"
             android:orientation="vertical">
 
@@ -27,6 +30,7 @@
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="86dp"
+                android:layout_gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <TextView
@@ -42,8 +46,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="619dp"
-                android:layout_gravity="center"
+                android:layout_height="634dp"
+                android:layout_gravity="center_horizontal"
                 android:background="@drawable/registered_1"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
@@ -51,8 +55,11 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="60dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -70,18 +77,21 @@
                     <EditText
                         android:id="@+id/id123"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:ems="10"
                         android:fontFamily="@font/kai08mz"
-                        android:hint="自已的學號"
+                        android:hint="自己的學號"
                         android:inputType="number"
                         android:maxLength="10" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="40dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -97,9 +107,8 @@
 
                     <EditText
                         android:id="@+id/name123"
-                        android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:ems="10"
                         android:fontFamily="@font/kai08mz"
                         android:hint="自己記得住的號碼"
@@ -111,7 +120,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="50dp"
                     android:orientation="horizontal">
 
 
@@ -119,76 +131,75 @@
                         android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:layout_weight="1"
                         app:srcCompat="@drawable/happy1" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="91dp"
-                    android:orientation="vertical"></LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|center_horizontal"
+                    android:layout_height="287dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="160dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginEnd="30dp"
+                        android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <Button
                             android:id="@+id/btn6666"
                             android:layout_width="match_parent"
-                            android:layout_height="84dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@drawable/back1" />
 
                         <TextView
                             android:id="@+id/textView60"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
                             android:fontFamily="@font/kai08mz"
                             android:gravity="center_horizontal"
                             android:text="上一步"
                             android:textColor="#020202"
-                            android:textSize="30sp" />
+                            android:textSize="24sp" />
 
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="83dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="160dp"
-                        android:layout_height="match_parent"
+                        android:layout_marginStart="30dp"
+                        android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:orientation="vertical">
 
                         <Button
                             android:id="@+id/button4321"
                             android:layout_width="match_parent"
-                            android:layout_height="106dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:background="@drawable/next" />
 
                         <TextView
                             android:id="@+id/textView63"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_weight="3"
                             android:fontFamily="@font/kai08mz"
                             android:gravity="center_horizontal"
                             android:text="下一步"
                             android:textColor="#020202"
-                            android:textSize="30dp" />
+                            android:textSize="24dp" />
 
 
                     </LinearLayout>

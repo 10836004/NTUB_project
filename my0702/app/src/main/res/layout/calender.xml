@@ -14,6 +14,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFF6CC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,17 +23,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/n1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"/>
+                android:visibility="gone" />
+
             <LinearLayout
                 android:id="@+id/LinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/underline"
                 android:orientation="horizontal">
 
@@ -42,90 +48,214 @@
                     android:fontFamily="@font/kai08mz"
                     android:text="2、今天發生什麼呢?"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="27sp" />
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView40"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="678dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="201dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/underline"
+
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="bottom"
-                        android:text="和誰在一起？"
+                        android:text="天氣"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="113dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView25"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/sunnya" />
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/cloudya" />
+
+                                <ImageView
+                                    android:id="@+id/imageView8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/rainya" />
+
+                                <ImageView
+                                    android:id="@+id/imageView27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/storma" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RadioGroup
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButtonsun"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal|center"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/kai08mz"
+                                        android:text="晴天"
+                                        android:checked="true"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioButtoncludy"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal|center"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/kai08mz"
+                                        android:text="陰涼"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioButtonrainy"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal|center"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/kai08mz"
+                                        android:text="雨天"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioButtonstorm"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal|center"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/kai08mz"
+                                        android:text="雷雨交加"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </RadioGroup>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="139dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:padding="2dp">
-
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/man"
-                        tools:ignore="VectorDrawableCompat" />
-
-                    <ImageView
-                        android:id="@+id/imageView30"
-                        android:layout_width="match_parent"
-                        android:layout_height="147dp"
-                        android:layout_gravity="center|center_horizontal"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/family1" />
-
-                    <ImageView
-                        android:id="@+id/imageView28"
-                        android:layout_width="match_parent"
-                        android:layout_height="147dp"
-                        android:layout_gravity="center|center_horizontal"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/friend" />
-
-                    <ImageView
-                        android:id="@+id/imageView35"
-                        android:layout_width="match_parent"
-                        android:layout_height="147dp"
-                        android:layout_gravity="center|center_horizontal"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/teacher" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@drawable/underline"
                     android:clipToPadding="false"
                     android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/kai08mz"
+                            android:gravity="bottom"
+                            android:text="和誰在一起？"
+                            android:textColor="#000000"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="139dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/man"
+                            tools:ignore="VectorDrawableCompat" />
+
+                        <ImageView
+                            android:id="@+id/imageView30"
+                            android:layout_width="match_parent"
+                            android:layout_height="147dp"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/family1" />
+
+                        <ImageView
+                            android:id="@+id/imageView28"
+                            android:layout_width="match_parent"
+                            android:layout_height="147dp"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/friend" />
+
+                        <ImageView
+                            android:id="@+id/imageView35"
+                            android:layout_width="match_parent"
+                            android:layout_height="147dp"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/teacher" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="54dp"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <RadioButton
@@ -135,15 +265,15 @@
                             android:layout_gravity="center_horizontal|center"
                             android:layout_weight="1"
                             android:fontFamily="@font/kai08mz"
+                            android:text="自己"
                             android:textColor="#000000"
-                            android:textSize="18dp"
-                            android:text="自己" />
+                            android:textSize="18dp" />
 
                         <RadioButton
                             android:id="@+id/radioButton13"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center|center_horizontal"
+
                             android:layout_weight="1"
                             android:checked="true"
                             android:fontFamily="@font/kai08mz"
@@ -155,11 +285,9 @@
                             android:id="@+id/radioButton12"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-                            android:layout_gravity="center|center_horizontal"
                             android:layout_weight="1"
                             android:fontFamily="@font/kai08mz"
-                            android:text="同學/朋友"
+                            android:text="朋友"
                             android:textColor="#000000"
                             android:textSize="18sp" />
 
@@ -167,7 +295,6 @@
                             android:id="@+id/radioButton11"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center|center_horizontal"
                             android:layout_weight="1"
                             android:fontFamily="@font/kai08mz"
                             android:text="老師"
@@ -180,8 +307,11 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="186dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@drawable/underline"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -244,13 +374,14 @@
                         <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+
                             android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radioButton15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center|center_horizontal"
+                                android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:checked="true"
                                 android:fontFamily="@font/kai08mz"
@@ -294,7 +425,9 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="111dp"
+                    android:layout_height="113dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -309,6 +442,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/kai08mz"
                             android:text="日記"
+
                             android:textColor="#000000"
 
                             android:textSize="24sp" />
@@ -345,71 +479,61 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="21dp"
-                    android:orientation="vertical"></LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="160dp"
+                    android:gravity="center"
+                    android:layout_margin="30dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="118dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
+                        android:layout_marginEnd="40dp"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <Button
                             android:id="@+id/btn17"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/back" />
 
                         <TextView
                             android:id="@+id/textView18"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:fontFamily="@font/kai08mz"
                             android:gravity="center"
-                            android:text="回上一步"
+                            android:text="上一步"
                             android:textColor="#000000"
-                            android:textSize="24sp" />
+                            android:textSize="21sp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="118dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"></LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
+                        android:layout_marginStart="40dp"
+                        android:gravity="center_vertical"
                         android:orientation="vertical">
 
                         <Button
                             android:id="@+id/game_next_button"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/salvar" />
 
                         <TextView
                             android:id="@+id/textView19"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:fontFamily="@font/kai08mz"
                             android:gravity="center"
                             android:text="儲存"
                             android:textColor="#000000"
-                            android:textSize="24sp" />
+                            android:textSize="21sp" />
                     </LinearLayout>
                 </LinearLayout>
 

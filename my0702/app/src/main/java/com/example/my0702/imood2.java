@@ -17,14 +17,7 @@ public class imood2 extends AppCompatActivity {
     final Context context = this;
     private Button button1234,button01234;
     private RadioButton radioButton;
-    private ImageButton
-            mimageButton1,
-            mimageButton2,
-            mimageButton3,
-            mimageButton4,
-            mimageButton5,
-            mimageButton6,
-            mimageButton7;
+    private ImageButton imageButton;
     private Boolean f_jumptolayout03 = false;
     private Integer layout_choice = 0;
     private TextView TextView1;
@@ -59,8 +52,6 @@ public class imood2 extends AppCompatActivity {
         mRadioButton5 = findViewById(R.id.two_button05);
         mRadioButton6 = findViewById(R.id.two_button06);
         mRadioButton7 = findViewById(R.id.two_button07);
-
-
     }
     private View.OnClickListener btnAdd1OnClickback2 = new View.OnClickListener() {
         @Override

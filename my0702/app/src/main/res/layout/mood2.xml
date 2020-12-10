@@ -11,7 +11,16 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFF6CC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,11 +48,11 @@
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/kai08mz"
                     android:text="二、從下列選項中選1個最符合你現在的心情。"
                     android:textColor="#040404"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -65,7 +74,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:checked="true"
                             android:text="7"
+
                             android:textSize="30sp" />
 
                         <RadioButton
@@ -89,7 +100,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:checked="true"
+
                             android:text="4"
                             android:textSize="30sp" />
 
@@ -194,12 +205,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="117dp"
                 android:gravity="center"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:layout_marginEnd="40dp"
                     android:orientation="vertical">
 
                     <Button
@@ -222,21 +235,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="139dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView46"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-                </LinearLayout>
-
-                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <Button
