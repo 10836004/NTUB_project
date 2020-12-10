@@ -39,7 +39,7 @@
                     android:visibility="gone"/>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 
@@ -50,7 +50,7 @@
                         android:layout_marginBottom="15dp"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center_horizontal"
-                        android:text="查看日記"
+                        android:text="查看心情"
                         android:textSize="36sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -77,10 +77,10 @@
 
                     <ImageView
                         android:id="@+id/imageView23"
-                        android:layout_width="100dp"
+                        android:layout_width="150dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/diary123" />
+                        app:srcCompat="@drawable/kk" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kai08mz"
-                            android:text="天氣："
+                            android:text="文字選擇："
                             android:textSize="24dp" />
 
                         <EditText
@@ -102,10 +102,6 @@
                             android:layout_weight="1"
                             android:ems="10"
                             android:fontFamily="@font/kai08mz"
-
-                            android:textSize="24dp"
-
-
                             />
 
                     </LinearLayout>
@@ -119,17 +115,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kai08mz"
-                            android:text="心情："
+                            android:text="圖片選擇："
                             android:textSize="24dp" />
+
 
                         <EditText
                             android:id="@+id/edthi1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:fontFamily="@font/kai08mz"
-                            android:inputType="number" />
+                            android:fontFamily="@font/kai08mz" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -141,7 +135,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kai08mz"
-                            android:text="跟誰："
+                            android:text="老師建議："
                             android:textSize="24dp" />
 
                         <EditText
@@ -160,7 +154,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kai08mz"
-                            android:text="發生時間："
+                            android:text="二次測試："
                             android:textSize="24dp" />
 
                         <EditText
@@ -171,25 +165,7 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kai08mz"
-                            android:text="日記內容："
-                            android:textSize="24dp" />
-
-                        <EditText
-                            android:id="@+id/edtbody11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kai08mz" />
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -200,7 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kai08mz"
-                            android:text="寫日記時間："
+                            android:text="測試時間："
                             android:textSize="24dp" />
 
                         <EditText
@@ -253,7 +229,7 @@
                                 android:layout_width="101dp"
                                 android:layout_height="93dp"
                                 android:layout_weight="1"
-                                android:background="@drawable/diary2" />
+                                android:background="@drawable/kkk" />
 
                             <TextView
                                 android:id="@+id/back1"
@@ -261,7 +237,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kai08mz"
                                 android:gravity="left"
-                                android:text="選日記"
+                                android:text="選擇測試"
                                 android:textSize="24sp" />
 
                         </LinearLayout>

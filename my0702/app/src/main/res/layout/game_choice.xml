@@ -57,7 +57,7 @@
                     android:gravity="center"
                     android:text="拼圖遊戲"
                     android:textColor="#040404"
-                    android:textSize="36sp" />
+                    android:textSize="33sp" />
 
             </LinearLayout>
 
@@ -84,7 +84,7 @@
                     android:gravity="center"
                     android:text="認識情緒遊戲"
                     android:textColor="#040404"
-                    android:textSize="36sp" />
+                    android:textSize="33sp" />
             </LinearLayout>
 
             <LinearLayout

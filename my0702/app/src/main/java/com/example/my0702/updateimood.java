@@ -1,7 +1,6 @@
 package com.example.my0702;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,22 +12,21 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import android.os.Bundle;
 
-public class updatediary extends AppCompatActivity {
+public class updateimood extends AppCompatActivity {
     private Button btn1,btnback,btnhome,buttonupdate;
     private EditText mEdtkg1,mEdthi, mEdtBMI1,mEdtbodya, mEdtbody1,mEdtbody11,mEdtbody21,mEdtbody31,mEdtbody41,mEdtbody51,mEdtbody61,mEdtbody71,mEdtbody81,mEdtbody91;
     private TextView TextView1,text1;
     SimpleDateFormat sDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
     String date1 = sDateFormat1.format(new java.util.Date());
 
-    public updatediary() {
+    public updateimood() {
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_updatediary);
-
+        setContentView(R.layout.activity_updateimood);
         //取得傳遞過來的資料
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
@@ -48,12 +46,12 @@ public class updatediary extends AppCompatActivity {
         mEdtbody1 = findViewById(R.id.edthi1);
         mEdtbody11= findViewById(R.id.edtkg1);
         mEdtbody21= findViewById(R.id.edtbody1);
-        mEdtbody31 = findViewById(R.id.edtbody11);
+        //mEdtbody31 = findViewById(R.id.edtbody11);
         mEdtbody41 = findViewById(R.id.edtbody21);
         //text1= findViewById(R.id.textView4);
 
         try {
-            String result = MainActivityloginSQL.executeQuery1("SELECT * FROM `calender` where `idid`='"+text1.getText().toString()+"'");
+            String result = MainActivityloginSQL.executeQuery1("SELECT * FROM `imood` where `idid`='"+text1.getText().toString()+"'");
             //String result = MainActivityloginSQL.executeQuery1("SELECT * FROM `calender` WHERE `id` = '3333'  and `datetime` = '2020-10-11 08:39:19''");
 
             //   text1.setText("SELECT * FROM `registered` where `name` = '"+TextView1.getText().toString()+"'");
@@ -64,11 +62,11 @@ public class updatediary extends AppCompatActivity {
                 JSONArray jsonArray2 = new JSONArray(result);
                 JSONObject jsonData = jsonArray2.getJSONObject(0);
 
-                mEdtbodya.setText( jsonData.getString("weather"));;
-                mEdtbody1.setText( jsonData.getString("mood"));;
-                mEdtbody11.setText( jsonData.getString("person"));
-                mEdtbody21.setText( jsonData.getString("time"));
-                mEdtbody31.setText( jsonData.getString("diary"));
+                mEdtbodya.setText( jsonData.getString("imood1"));;
+                mEdtbody1.setText( jsonData.getString("imood2"));;
+                mEdtbody11.setText( jsonData.getString("imood3"));
+                mEdtbody21.setText( jsonData.getString("imood4"));
+                //mEdtbody31.setText( jsonData.getString("imood4"));
                 mEdtbody41.setText( jsonData.getString("datetime"));
 
 
@@ -85,7 +83,7 @@ public class updatediary extends AppCompatActivity {
     private View.OnClickListener buttonback = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(updatediary.this, updatedd.class);
+            Intent intent = new Intent(updateimood.this, imooddd.class);
             intent.putExtra("account", TextView1.getText().toString());//"姓名:"
             startActivity(intent);//跳轉到倒計時頁面
         }
@@ -94,7 +92,7 @@ public class updatediary extends AppCompatActivity {
     private View.OnClickListener buttonhome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(updatediary.this, MainActivity.class);
+            Intent intent = new Intent(updateimood.this, MainActivity.class);
             intent.putExtra("account", TextView1.getText().toString());//"姓名:"
             startActivity(intent);//跳轉到倒計時頁面
         }
@@ -102,17 +100,16 @@ public class updatediary extends AppCompatActivity {
     private View.OnClickListener button123 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String result = MainActivityloginSQL.executeQuery1("UPDATE calender SET `weather`='"+mEdtbodya.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
-            String result1 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `mood`='"+mEdtbody1.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
-            String result2 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `person`='"+mEdtbody11.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
-            String result3 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `time`='"+mEdtbody21.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
-            String result4 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `diary`='"+mEdtbody31.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
+            String result = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood1`='"+mEdtbodya.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
+            String result1 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood2`='"+mEdtbody1.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
+            String result2 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood3`='"+mEdtbody11.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
+            String result3 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood4`='"+mEdtbody21.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
+            //String result4 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood4`='"+mEdtbody31.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
             //String result5 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `datetime`='"+mEdtbody41.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
 
-            Intent intent = new Intent(updatediary.this, updatedd.class);
+            Intent intent = new Intent(updateimood.this, imooddd.class);
             intent.putExtra("account", TextView1.getText().toString());//"姓名:"
             startActivity(intent);//跳轉到倒計時頁面
         }
     };
-
 }

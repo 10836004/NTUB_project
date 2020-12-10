@@ -338,7 +338,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:fontFamily="@font/kai08mz"
-                        android:hint="0912345678"
+                        android:hint="0912345678 沒有填X"
                         android:inputType="phone"
                         android:maxLength="10" />
 
