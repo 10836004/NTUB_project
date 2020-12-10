@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFF6CC"
         android:orientation="horizontal"
         tools:layout_editor_absoluteY="120dp">
 
@@ -37,9 +38,12 @@
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
+                android:layout_marginTop="12dp"
+
+                android:gravity="center"
                 android:text="哪些是好心情呢?"
                 android:textColor="#000000"
+                android:fontFamily="@font/kai08mz"
                 android:textSize="36sp" />
         </LinearLayout>
 

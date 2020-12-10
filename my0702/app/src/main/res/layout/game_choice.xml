@@ -13,6 +13,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:background="#FFF6CC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,16 +41,18 @@
 
                 <ImageButton
                     android:id="@+id/puzzle_game_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="240dp"
+                    android:layout_width="360dp"
+                    android:layout_height="260dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
                     android:scaleType="fitXY"
                     android:src="@drawable/unnamed" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
-                    android:layout_height="83dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"
                     android:text="拼圖遊戲"
@@ -64,8 +69,8 @@
 
                 <ImageButton
                     android:id="@+id/learn_mood_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="224dp"
+                    android:layout_width="360dp"
+                    android:layout_height="260dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:scaleType="fitXY"
@@ -74,7 +79,7 @@
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"
                     android:text="認識情緒遊戲"
@@ -84,7 +89,8 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="109dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="vertical">
 

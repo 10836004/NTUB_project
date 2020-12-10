@@ -29,8 +29,12 @@ public class calender extends AppCompatActivity {
             mRadioButton4,
             mRadioButton5,
             mRadioButton6,
-            mRadioButton7;
-    String ad,ae;
+            mRadioButton7,
+            mRadioButton8,
+            mRadioButton9,
+            mRadioButton10,
+            mRadioButton11;
+    String ad,ae,aw;
     private EditText diary;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class calender extends AppCompatActivity {
         btn1111 = findViewById(R.id.game_next_button);
         btn0000.setOnClickListener(buttonback);
         btn1111.setOnClickListener(btnAdd1OnClick123456);
+
         mRadioButton0 = findViewById(R.id.radioButtonpersonal);
         mRadioButton1 = findViewById(R.id.radioButton13);
         mRadioButton2 = findViewById(R.id.radioButton12);
@@ -54,6 +59,10 @@ public class calender extends AppCompatActivity {
         mRadioButton5 = findViewById(R.id.radioButton17);
         mRadioButton6 = findViewById(R.id.radioButton14);
         mRadioButton7 = findViewById(R.id.radioButton16);
+        mRadioButton8 = findViewById(R.id.radioButtonsun);
+        mRadioButton9 = findViewById(R.id.radioButtoncludy);
+        mRadioButton10 = findViewById(R.id.radioButtonrainy);
+        mRadioButton11= findViewById(R.id.radioButtonstorm);
         TextView2 = findViewById(R.id.text_to_change);
         changeTextViewValueRandomlyOnButtonClick();
 
@@ -80,6 +89,17 @@ public class calender extends AppCompatActivity {
     private View.OnClickListener btnAdd1OnClick123456 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            if (mRadioButton8.isChecked()) {
+                aw = "晴天";
+            } else if (mRadioButton9.isChecked()) {
+                aw = "陰涼";
+            } else if (mRadioButton10.isChecked()) {
+                aw = "雨天";
+            } else if (mRadioButton11.isChecked()) {
+                aw = "雷雨交加";
+            }
+
+
             if (mRadioButton0.isChecked()) {
                 ad = "自己";
             } else if (mRadioButton1.isChecked()) {
@@ -112,6 +132,7 @@ public class calender extends AppCompatActivity {
                 String result1 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `person`='" + ad + "' WHERE id = '" + TextView1.getText().toString() + "'");
                 String result2 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `time`='" + ae + "' WHERE id = '" + TextView1.getText().toString() + "'");
                 String result3 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `diary`='" + TextView2.getText().toString() + "' WHERE id = '" + TextView1.getText().toString() + "'");
+                String result4 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `weather`='" + aw + "' WHERE id = '" + TextView1.getText().toString() + "'");
                 Intent intent = new Intent(calender.this, MainActivity.class);
                 intent.putExtra("account", TextView1.getText().toString());//"姓名:"
                 startActivity(intent);//跳轉到倒計時頁面

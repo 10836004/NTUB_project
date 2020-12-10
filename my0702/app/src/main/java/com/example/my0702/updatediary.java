@@ -16,10 +16,14 @@ import java.text.SimpleDateFormat;
 
 public class updatediary extends AppCompatActivity {
     private Button btn1,btnhome,buttonupdate;
-    private EditText mEdtkg1,mEdthi, mEdtBMI1, mEdtbody1,mEdtbody11,mEdtbody21,mEdtbody31,mEdtbody41,mEdtbody51,mEdtbody61,mEdtbody71,mEdtbody81,mEdtbody91;
+    private EditText mEdtkg1,mEdthi, mEdtBMI1,mEdtbodya, mEdtbody1,mEdtbody11,mEdtbody21,mEdtbody31,mEdtbody41,mEdtbody51,mEdtbody61,mEdtbody71,mEdtbody81,mEdtbody91;
     private TextView TextView1,text1;
     SimpleDateFormat sDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
     String date1 = sDateFormat1.format(new java.util.Date());
+
+    public updatediary() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +39,7 @@ public class updatediary extends AppCompatActivity {
         btnhome.setOnClickListener(buttonhome);
         buttonupdate= findViewById(R.id.update);
         buttonupdate.setOnClickListener(button123);
+        mEdtbodya = findViewById(R.id.edthi);
         mEdtbody1 = findViewById(R.id.edthi1);
         mEdtbody11= findViewById(R.id.edtkg1);
         mEdtbody21= findViewById(R.id.edtbody1);
@@ -53,7 +58,7 @@ public class updatediary extends AppCompatActivity {
                 JSONArray jsonArray2 = new JSONArray(result);
                 JSONObject jsonData = jsonArray2.getJSONObject(0);
 
-
+                mEdtbodya.setText( jsonData.getString("weather"));;
                 mEdtbody1.setText( jsonData.getString("mood"));;
                 mEdtbody11.setText( jsonData.getString("person"));
                 mEdtbody21.setText( jsonData.getString("time"));
@@ -83,7 +88,7 @@ public class updatediary extends AppCompatActivity {
     private View.OnClickListener button123 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            String result = MainActivityloginSQL.executeQuery1("UPDATE calender SET `weather`='"+mEdtbodya.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
             String result1 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `mood`='"+mEdtbody1.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
             String result2 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `person`='"+mEdtbody11.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
             String result3 = MainActivityloginSQL.executeQuery1("UPDATE calender SET `time`='"+mEdtbody21.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");

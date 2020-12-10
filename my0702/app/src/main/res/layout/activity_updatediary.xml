@@ -11,17 +11,20 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:background="#FFF6CC">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
             android:orientation="vertical">
 
             <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center|center_horizontal">
 
                 <TextView
@@ -61,6 +64,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+
                     android:orientation="vertical">
 
                     <ImageView
@@ -69,6 +77,34 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal"
                         app:srcCompat="@drawable/diary123" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kai08mz"
+                            android:text="天氣："
+                            android:textSize="24dp" />
+
+                        <EditText
+                            android:id="@+id/edthi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:fontFamily="@font/kai08mz"
+
+                            android:textSize="24dp"
+
+
+                            />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"

@@ -11,11 +11,18 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFF6CC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
 
             android:layout_marginStart="8dp"
@@ -27,7 +34,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
@@ -58,14 +65,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="430dp"
+                android:layout_height="483dp"
                 android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
                 android:background="@drawable/button"
                 android:gravity="center_horizontal">
 
                 <RadioGroup
-                    android:layout_width="64dp"
-                    android:layout_height="418dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <RadioButton
@@ -73,6 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
+                        android:checked="true"
                         android:fontFamily="@font/kai08mz"
                         android:text="1"
                         android:textSize="30sp" />
@@ -92,7 +101,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:checked="true"
                         android:fontFamily="@font/kai08mz"
                         android:text="3"
                         android:textSize="30sp" />
@@ -118,7 +126,7 @@
                     <TextView
                         android:id="@+id/textView900"
                         android:layout_width="match_parent"
-                        android:layout_height="108dp"
+                        android:layout_height="121dp"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="left|center_vertical"
                         android:text="當遇到別人讓我很生氣，我會告訴自己不要理他們就好了"
@@ -128,7 +136,7 @@
                     <TextView
                         android:id="@+id/textView910"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="122dp"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="left|center_vertical"
                         android:text="我會把這件開心的事情和朋友分享，記住這件開心的事情。"
@@ -138,7 +146,7 @@
                     <TextView
                         android:id="@+id/textView920"
                         android:layout_width="match_parent"
-                        android:layout_height="104dp"
+                        android:layout_height="118dp"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="left|center_vertical"
                         android:text="我會找有趣的事情去做，讓自己的心情更好一點。"
@@ -148,7 +156,7 @@
                     <TextView
                         android:id="@+id/textView930"
                         android:layout_width="match_parent"
-                        android:layout_height="101dp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="left|center_vertical"
                         android:text="我會自己找一個安靜的地方，自己一個人安靜地玩。"

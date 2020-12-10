@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/underline"
+    android:background="#FFF6CC"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFF6CC">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/buttonlogout"
@@ -69,7 +70,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/text_mood"
+                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -81,7 +82,7 @@
 
                 <Button
                     android:id="@+id/button9"
-                    android:layout_width="133dp"
+                    android:layout_width="115dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/thermometer"
                     android:fontFamily="@font/kai08mz" />
@@ -94,7 +95,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/text_calendar"
+                    android:id="@+id/textView75"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -105,7 +106,7 @@
 
                 <Button
                     android:id="@+id/button7"
-                    android:layout_width="133dp"
+                    android:layout_width="115dp"
                     android:layout_height="86dp"
                     android:layout_gravity="center"
                     android:background="@drawable/diary"
@@ -119,7 +120,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/text_game"
+                    android:id="@+id/textView76"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -130,7 +131,7 @@
 
                 <Button
                     android:id="@+id/button10"
-                    android:layout_width="133dp"
+                    android:layout_width="115dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/circus"
                     android:fontFamily="@font/kai08mz" />
@@ -143,7 +144,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/text_profile"
+                    android:id="@+id/textView77"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -154,7 +155,7 @@
 
                 <Button
                     android:id="@+id/button8"
-                    android:layout_width="131dp"
+                    android:layout_width="115dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/profile"
                     android:fontFamily="@font/kai08mz" />

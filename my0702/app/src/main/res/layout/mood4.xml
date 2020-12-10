@@ -9,11 +9,20 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
@@ -24,12 +33,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="181dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
@@ -39,21 +48,21 @@
                         android:fontFamily="@font/kai08mz"
                         android:text="四、哇!真不簡單，你已經想了方法讓自己心情好一點"
                         android:textColor="#040404"
-                        android:textSize="30sp" />
+                        android:textSize="28sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="111dp"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/mood4txt2"
                         android:layout_width="match_parent"
-                        android:layout_height="90dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/kai08mz"
-                        android:text="請你想想看使用上面選擇的方法後，再告訴我們你心情會變得如何?"
+                        android:hint="請你想想看使用上面方法後，再告訴我們你心情會變得如何?"
                         android:textColor="#040404"
                         android:textSize="24sp" />
                 </LinearLayout>
@@ -62,7 +71,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="434dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:background="@drawable/button">
 
                 <RadioGroup
@@ -76,9 +86,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
+                        android:checked="true"
                         android:fontFamily="@font/kai08mz"
                         android:text="7"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/four_button06"
@@ -87,7 +98,7 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="6"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/four_button05"
@@ -96,17 +107,16 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="5"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/four_button04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:checked="true"
                         android:fontFamily="@font/kai08mz"
                         android:text="4"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/four_button03"
@@ -115,7 +125,7 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="3"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/four_button02"
@@ -124,16 +134,17 @@
                         android:layout_weight="0.5"
                         android:fontFamily="@font/kai08mz"
                         android:text="2"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
                     <RadioButton
                         android:id="@+id/four_button01"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
+
                         android:fontFamily="@font/kai08mz"
                         android:text="1"
-                        android:textSize="30sp" />
+                        android:textSize="24sp" />
 
 
                 </RadioGroup>
@@ -211,7 +222,7 @@
                         android:gravity="center"
                         android:text="怒氣沖沖失去理智"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="21sp" />
 
                 </LinearLayout>
 
@@ -220,28 +231,29 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="109dp"
-                android:gravity="center"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginEnd="40dp"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/mood4_back_button"
-                        android:layout_width="109dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="12dp"
                         android:background="@drawable/back" />
 
                     <TextView
                         android:id="@+id/mood4textView18"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="上一步"
@@ -250,35 +262,23 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="104dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView46"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-                </LinearLayout>
-
-                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/mood4_next_button"
-                        android:layout_width="109dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+
                         android:background="@drawable/redo" />
 
                     <TextView
                         android:id="@+id/mood4textView19"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/kai08mz"
                         android:gravity="center"
                         android:text="下一步"
