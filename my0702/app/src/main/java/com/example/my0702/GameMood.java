@@ -2,19 +2,16 @@ package com.example.my0702;
 
 //import android.support.v7.app.AppCompatActivity;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.lang.Thread;
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Random;
 
 public class GameMood extends Activity
@@ -43,6 +40,17 @@ public class GameMood extends Activity
     public TextView textView28;
     public TextView textView29;
     public TextView textView30;
+    public TextView textView32;
+    public int mode;
+    public int total_score = 0;
+    public String[] happy;
+    public String[] sad;
+    public String[] scared;
+    public String[] angry;
+    public String[] moving;
+    public String[] hate;
+    public ArrayList<Integer> have_seen;
+
     private static Handler handler;
     private static Runnable runner;
 
@@ -51,31 +59,38 @@ public class GameMood extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_mood);
         Random rnd = new Random();
-        final int mode = rnd.nextInt(2);
+        mode = rnd.nextInt(6);
+        happy = new String[] {"game_ecstasy","game_happy","game_glad","game_jolly","game_pleasant","game_surprise","game_tension","game_panic","game_fear","game_confound","game_guilt","game_hate"};
+        sad = new String[] {"game_disappointed","game_exhausted","game_alone","game_sorrowful","game_wronged","game_sad","game_ecstasy","game_happy","game_glad","game_comfortable","game_relax","game_blessed"};
+        scared = new String[] {"game_uneasy","game_worried","game_scared","game_tension","game_panic","game_fear","game_proud","game_calm","game_moving","game_happy","game_pleasant","game_ecstasy"};
+        angry = new String[] {"game_setback","game_jealous","game_moot","game_crazy","game_anger","game_angry","game_jolly","game_pleasant","game_relax","game_proud","game_calm","game_comfortable"};
+        moving = new String[] {"game_comfortable","game_relax","game_blessed","game_proud","game_calm","game_moving","game_wronged","game_alone","game_sad","game_moot","game_crazy","game_anger",};
+        hate = new String[] {"game_awkward","game_bored","game_confound","game_guilt","game_hate","game_shock","game_ecstasy","game_jolly","game_glad","game_moving","game_calm","game_blessed"};
+        have_seen = new ArrayList<>(12);
         imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
-        imageButton3.setVisibility(View.INVISIBLE);
+//        imageButton3.setVisibility(View.INVISIBLE);
         imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
-        imageButton4.setVisibility(View.INVISIBLE);
+//        imageButton4.setVisibility(View.INVISIBLE);
         imageButton5 = (ImageButton) findViewById(R.id.imageButton5);
-        imageButton5.setVisibility(View.INVISIBLE);
+//        imageButton5.setVisibility(View.INVISIBLE);
         imageButton6 = (ImageButton) findViewById(R.id.imageButton6);
-        imageButton6.setVisibility(View.INVISIBLE);
+//        imageButton6.setVisibility(View.INVISIBLE);
         imageButton7 = (ImageButton) findViewById(R.id.imageButton7);
-        imageButton7.setVisibility(View.INVISIBLE);
+//        imageButton7.setVisibility(View.INVISIBLE);
         imageButton8 = (ImageButton) findViewById(R.id.imageButton8);
-        imageButton8.setVisibility(View.INVISIBLE);
+//        imageButton8.setVisibility(View.INVISIBLE);
         imageButton9 = (ImageButton) findViewById(R.id.imageButton9);
-        imageButton9.setVisibility(View.INVISIBLE);
+//        imageButton9.setVisibility(View.INVISIBLE);
         imageButton10 = (ImageButton) findViewById(R.id.imageButton10);
-        imageButton10.setVisibility(View.INVISIBLE);
+//        imageButton10.setVisibility(View.INVISIBLE);
         imageButton11 = (ImageButton) findViewById(R.id.imageButton11);
-        imageButton11.setVisibility(View.INVISIBLE);
+//        imageButton11.setVisibility(View.INVISIBLE);
         imageButton12 = (ImageButton) findViewById(R.id.imageButton12);
-        imageButton12.setVisibility(View.INVISIBLE);
+//        imageButton12.setVisibility(View.INVISIBLE);
         imageButton13 = (ImageButton) findViewById(R.id.imageButton13);
-        imageButton13.setVisibility(View.INVISIBLE);
+//        imageButton13.setVisibility(View.INVISIBLE);
         imageButton14 = (ImageButton) findViewById(R.id.imageButton14);
-        imageButton14.setVisibility(View.INVISIBLE);
+//        imageButton14.setVisibility(View.INVISIBLE);
         textView16 = (TextView) findViewById(R.id.textView16);
         textView16.setVisibility(View.INVISIBLE);
         textView18 = (TextView) findViewById(R.id.textView18);
@@ -100,21 +115,50 @@ public class GameMood extends Activity
         textView29.setVisibility(View.INVISIBLE);
         textView30 = (TextView) findViewById(R.id.textView30);
         textView30.setVisibility(View.INVISIBLE);
-        final int total_score = 0;
-        final ArrayList<String> goodMood = new ArrayList<>();
-        goodMood.add("game_clam");
-        goodMood.add("game_happy");
-        goodMood.add("game_funny");
-        final ArrayList<String> badMood = new ArrayList<>();
-        badMood.add("game_angry");
-        badMood.add("game_anxiety");
-        badMood.add("game_frustation");
-        badMood.add("game_guilt");
-        badMood.add("game_jelous");
-        badMood.add("game_mood");
-        badMood.add("game_sad");
-        badMood.add("game_sad_cry");
-        badMood.add("game_worrid");
+        textView32 = (TextView) findViewById(R.id.textView32);
+        final ArrayList<String> happyMood = new ArrayList<>();
+        happyMood.add("game_ecstasy");
+        happyMood.add("game_happy");
+        happyMood.add("game_glad");
+        happyMood.add("game_jolly");
+        happyMood.add("game_pleasant");
+        happyMood.add("game_surprise");
+        final ArrayList<String> scaredMood = new ArrayList<>();
+        scaredMood.add("game_uneasy");
+        scaredMood.add("game_worried");
+        scaredMood.add("game_scared");
+        scaredMood.add("game_tension");
+        scaredMood.add("game_panic");
+        scaredMood.add("game_fear");
+        final ArrayList<String> hateMood = new ArrayList<>();
+        hateMood.add("game_awkward");
+        hateMood.add("game_bored");
+        hateMood.add("game_confound");
+        hateMood.add("game_guilt");
+        hateMood.add("game_hate");
+        hateMood.add("game_shock");
+        final ArrayList<String> movingMood = new ArrayList<>();
+        movingMood.add("game_blessed");
+        movingMood.add("game_calm");
+        movingMood.add("game_comfortable");
+        movingMood.add("game_moving");
+        movingMood.add("game_proud");
+        movingMood.add("game_relax");
+        final ArrayList<String> sadMood = new ArrayList<>();
+        sadMood.add("game_alone");
+        sadMood.add("game_disappointed");
+        sadMood.add("game_exhausted");
+        sadMood.add("game_sad");
+        sadMood.add("game_wronged");
+        sadMood.add("game_sorrowful");
+        final ArrayList<String> angryMood = new ArrayList<>();
+        angryMood.add("game_angry");
+        angryMood.add("game_anger");
+        angryMood.add("game_crazy");
+        angryMood.add("game_jealous");
+        angryMood.add("game_moot");
+        angryMood.add("game_setback");
+
         final ArrayList<TextView> textViews = new ArrayList<>();
         textViews.add(textView16);
         textViews.add(textView18);
@@ -149,10 +193,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton3.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton3, textViews.get(10), badMood, total_score);
+                    print_imagebutton_res_name(imageButton3, textViews.get(10), textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton3, textViews.get(10), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton3, textViews.get(10),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton3, textViews.get(10),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton3, textViews.get(10),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton3, textViews.get(10),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton3, textViews.get(10),textView32, hateMood);
                 }
 
             }
@@ -161,10 +217,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton4.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton4, textViews.get(9), badMood, total_score);
+                    print_imagebutton_res_name(imageButton4, textViews.get(9),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton4, textViews.get(9), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton4, textViews.get(9),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton4, textViews.get(9),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton4, textViews.get(9),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton4, textViews.get(9),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton4, textViews.get(9),textView32, hateMood);
                 }
             }
         });
@@ -172,10 +240,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton5.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton5, textViews.get(11), badMood, total_score);
+                    print_imagebutton_res_name(imageButton5, textViews.get(11),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton5, textViews.get(11), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton5, textViews.get(11),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton5, textViews.get(11),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton5, textViews.get(11),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton5, textViews.get(11),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton5, textViews.get(11),textView32, hateMood);
                 }
             }
         });
@@ -183,10 +263,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton6.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton6, textViews.get(6), badMood, total_score);
+                    print_imagebutton_res_name(imageButton6, textViews.get(6),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton6, textViews.get(6), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton6, textViews.get(6),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton6, textViews.get(6),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton6, textViews.get(6),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton6, textViews.get(6),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton6, textViews.get(6),textView32, hateMood);
                 }
             }
         });
@@ -194,10 +286,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton7.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton7, textViews.get(7), badMood, total_score);
+                    print_imagebutton_res_name(imageButton7, textViews.get(7),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton7, textViews.get(7), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton7, textViews.get(7),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton7, textViews.get(7),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton7, textViews.get(7),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton7, textViews.get(7),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton7, textViews.get(7),textView32, hateMood);
                 }
             }
         });
@@ -205,10 +309,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton8.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton8, textViews.get(8), badMood, total_score);
+                    print_imagebutton_res_name(imageButton8, textViews.get(8),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton8, textViews.get(8), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton8, textViews.get(8),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton8, textViews.get(8),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton8, textViews.get(8),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton8, textViews.get(8),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton8, textViews.get(8),textView32, hateMood);
                 }
             }
         });
@@ -216,10 +332,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton9.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton9, textViews.get(3), badMood, total_score);
+                    print_imagebutton_res_name(imageButton9, textViews.get(3),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton9, textViews.get(3), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton9, textViews.get(3),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton9, textViews.get(3),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton9, textViews.get(3),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton9, textViews.get(3),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton9, textViews.get(3),textView32, hateMood);
                 }
             }
         });
@@ -227,10 +355,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton10.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton10, textViews.get(4), badMood, total_score);
+                    print_imagebutton_res_name(imageButton10, textViews.get(4),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton10, textViews.get(4), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton10, textViews.get(4),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton10, textViews.get(4),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton10, textViews.get(4),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton10, textViews.get(4),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton10, textViews.get(4),textView32, hateMood);
                 }
             }
         });
@@ -238,10 +378,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton11.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton11, textViews.get(5), badMood, total_score);
+                    print_imagebutton_res_name(imageButton11, textViews.get(5),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton11, textViews.get(5), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton11, textViews.get(5),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton11, textViews.get(5), textView32,angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton11, textViews.get(5),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton11, textViews.get(5),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton11, textViews.get(5),textView32, hateMood);
                 }
             }
         });
@@ -249,10 +401,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton12.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton12, textViews.get(1), badMood, total_score);
+                    print_imagebutton_res_name(imageButton12, textViews.get(1),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton12, textViews.get(1), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton12, textViews.get(1),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton12, textViews.get(1),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton12, textViews.get(1),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton12, textViews.get(1),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton12, textViews.get(1),textView32, hateMood);
                 }
             }
         });
@@ -260,10 +424,22 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton13.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton13, textViews.get(2), badMood, total_score);
+                    print_imagebutton_res_name(imageButton13, textViews.get(2),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton13, textViews.get(2), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton13, textViews.get(2),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton13, textViews.get(2),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton13, textViews.get(2),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton13, textViews.get(2),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton13, textViews.get(2), textView32,hateMood);
                 }
             }
         });
@@ -271,39 +447,103 @@ public class GameMood extends Activity
             public void onClick(View v){
                 imageButton14.setVisibility(View.INVISIBLE);
                 if(mode==0){
-                    print_imagebutton_res_name(imageButton14, textViews.get(0), badMood, total_score);
+                    print_imagebutton_res_name(imageButton14, textViews.get(0),textView32, sadMood);
                 }
                 else if(mode==1){
-                    print_imagebutton_res_name(imageButton14, textViews.get(0), goodMood, total_score);
+                    print_imagebutton_res_name(imageButton14, textViews.get(0),textView32, happyMood);
+                }
+                else if(mode==2){
+                    print_imagebutton_res_name(imageButton14, textViews.get(0),textView32, angryMood);
+                }
+                else if(mode==3){
+                    print_imagebutton_res_name(imageButton14, textViews.get(0),textView32, scaredMood);
+                }
+                else if(mode==4){
+                    print_imagebutton_res_name(imageButton14, textViews.get(0),textView32, movingMood);
+                }
+                else if(mode==5){
+                    print_imagebutton_res_name(imageButton14, textViews.get(0),textView32, hateMood);
                 }
             }
         });
+        init_game(mode);
+    }
 
+    private void init_game(int mode){
+        System.out.println(mode);
+        have_seen.clear();
+        total_score = 0;
+        textView32.setText("總分 : 0");
         // set title
+        imageButton3.setVisibility(View.VISIBLE);
+        imageButton4.setVisibility(View.VISIBLE);
+        imageButton5.setVisibility(View.VISIBLE);
+        imageButton6.setVisibility(View.VISIBLE);
+        imageButton7.setVisibility(View.VISIBLE);
+        imageButton8.setVisibility(View.VISIBLE);
+        imageButton9.setVisibility(View.VISIBLE);
+        imageButton10.setVisibility(View.VISIBLE);
+        imageButton11.setVisibility(View.VISIBLE);
+        imageButton12.setVisibility(View.VISIBLE);
+        imageButton13.setVisibility(View.VISIBLE);
+        imageButton14.setVisibility(View.VISIBLE);
+
+
         if(mode==0){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是壞心情呢?");
+            title.setText("哪些是難過的心情呢?");
         }
         else if(mode==1){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是好心情呢?");
+            title.setText("哪些是快樂的心情呢?");
+        }
+        else if(mode==2){
+            TextView title = findViewById(R.id.textView7);
+            title.setText("哪些是生氣的心情呢?");
+        }
+        else if(mode==3){
+            TextView title = findViewById(R.id.textView7);
+            title.setText("哪些是害怕的心情呢?");
+        }
+        else if(mode==4){
+            TextView title = findViewById(R.id.textView7);
+            title.setText("哪些是感動的心情呢?");
+        }
+        else if(mode==5){
+            TextView title = findViewById(R.id.textView7);
+            title.setText("哪些是討厭的心情呢?");
         }
 
+
         // set visible
-        for (int i = 0; i < 5; i++) {
-            generator();
-        }
+//        for (int i = 0; i < 5; i++) {
+//            generator();
+//        }
 
         // set picture
         for (int i = 1; i < 13; i++) {
-            random_switch_image(i);
+            if (mode==0){
+                random_switch_image(i, sad, have_seen);
+            }
+            else if(mode==1){
+                random_switch_image(i, happy, have_seen);
+            }
+            else if(mode==2){
+                random_switch_image(i, angry, have_seen);
+            }
+            else if(mode==3){
+                random_switch_image(i, scared, have_seen);
+            }
+            else if(mode==4){
+                random_switch_image(i, moving, have_seen);
+            }
+            else if(mode==5){
+                random_switch_image(i, hate, have_seen);
+            }
         }
-
-
-
     }
 
-    private void print_imagebutton_res_name(ImageButton imagebotton, final TextView textView, ArrayList moods, int total_score){
+    private void print_imagebutton_res_name(ImageButton imagebotton, final TextView textView, TextView show_score, ArrayList moods){
         Boolean got_score = false;
         for (int i = 0
              ; i<moods.size(); i++) {
@@ -311,12 +551,38 @@ public class GameMood extends Activity
                 total_score += 1;
                 got_score = true;
                 textView.setText("+1");
+                System.out.println("總分 : " + Integer.toString(total_score));
+                show_score.setText("總分 : " + Integer.toString(total_score));
                 textView.setVisibility(View.VISIBLE);
+                if(total_score == 6){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage("是否要繼續下局遊戲？");
+                    builder.setTitle("提示");
+                    builder.setPositiveButton("是，我想繼續", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            mode = (mode + 1) % 6;
+                            init_game(mode);
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.setNegativeButton("否，我想離開", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            finish();
+                        }
+                    });
+                    builder.create().show();
+
+                }
                 textView.postDelayed(
                         new Runnable() {
                             @Override
                             public void run() {
                                 textView.setVisibility(View.INVISIBLE);
+
+
                             }
                         }, 3000);
             }
@@ -334,7 +600,7 @@ public class GameMood extends Activity
         }
     }
     protected final static int getResourceID(final String resName, final String resType, final Context ctx)
-        {
+    {
         final int ResourceID =
                 ctx.getResources().getIdentifier(resName, resType,
                         ctx.getApplicationInfo().packageName);
@@ -363,7 +629,7 @@ public class GameMood extends Activity
 //        text.invisable();
 //    }
 
-//    private void runTimer()
+    //    private void runTimer()
 //    {
 //        handler = new Handler();
 //        runner = new Runnable() {
@@ -399,14 +665,20 @@ public class GameMood extends Activity
 //
 //        handler.post(runner);
 //    }
-    public void random_switch_image(int imagebutton_num){
+    public void random_switch_image(int imagebutton_num, String[] topic, ArrayList<Integer> have_seen){
         Random rnd = new Random();
-        String[] data;
-        data = new String[] {"game_angry","game_anxiety","game_clam","game_frustation","game_funny","game_guilt","game_happy","game_jelous","game_mood","game_sad","game_sad_cry","game_worrid"};
-
+        int index = 0;
+        while (true){
+            index = rnd.nextInt(12);
+            if(!have_seen.contains(index)){
+                break;
+            }
+        }
+        have_seen.add(index);
         // final ImageButton img = (ImageButton) findViewById(R.id.imgRandom);
         // I have 3 images named img_0 to img_2, so...
-        final String str = data[rnd.nextInt(11)]; //"img_" + rnd.nextInt(11);
+        final String str = topic[index]; //"img_" + rnd.nextInt(11);
+
 
         switch (imagebutton_num) {
             case 1:
@@ -414,6 +686,7 @@ public class GameMood extends Activity
                         getResources().getDrawable(getResourceID(str, "drawable", getApplicationContext()))
                 );
                 imageButton3.setTag(str);
+
 
                 break;
             case 2:

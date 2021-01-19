@@ -16,13 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-
-
-
-
-
-
         android:usesCleartextTraffic="true">
+        <activity android:name=".updateimood"></activity>
+        <activity android:name=".imooddd" />
+        <activity android:name=".updatedd" />
         <activity android:name=".updatediary" />
         <activity android:name=".GameMood" />
         <activity android:name=".loginadd" />
@@ -48,15 +45,14 @@
         <activity android:name=".tt111111" />
         <activity android:name=".MainActivity_login_sql_text" />
         <activity android:name=".loginabc" />
-        <activity android:name=".SQLite_insert" />
-<!--        <activity-->
-<!--            android:name="com.example.my0702.MainActivity"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:screenOrientation="portrait" />-->
-
+        <activity android:name=".SQLite_insert" /> <!-- <activity -->
+        <!-- android:name="com.example.my0702.MainActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait" /> -->
         <service
             android:name=".MusicService"
             android:enabled="true" />
+
         <activity
             android:name=".textlogin"
             android:label="@string/title_activity_textlogin" />

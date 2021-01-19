@@ -26,19 +26,18 @@ public class BackgroundWorker  extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-        String login_url ="https://ntub.dewei.dev/SQLite_insert.php";
+        String login_url ="http://140.131.114.154/SQLite_insert.php";
         if (type.equals("SQLite_insert")){
         try {
             String mmm1 = params[1];
             String mmm2 = params[2];
             String mm1 = params[3];
             String a11 = params[4];
-            String mm3 = params[5];
-            String mm4 = params[6];
+            String mm4 = params[5];
+            String mm5 = params[6];
             String Spinner = params[7];
-            String mm6 = params[8];
-            String a12 = params[9];
-            String mm8 = params[10];
+            String mm7 = params[8];
+            String Spinner2 = params[9];
             URL url = new URL(login_url);
             HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
             httpURLConnection.setRequestMethod("POST");
@@ -51,12 +50,11 @@ public class BackgroundWorker  extends AsyncTask<String,Void,String> {
                     URLEncoder.encode("mmm2" ,"UTF-8")+"="+URLEncoder.encode(mmm2 ,"UTF-8")+"&"+
                     URLEncoder.encode("mm1" ,"UTF-8")+"="+URLEncoder.encode(mm1 ,"UTF-8")+"&"+
                     URLEncoder.encode("mm2" ,"UTF-8")+"="+URLEncoder.encode(a11 ,"UTF-8")+"&"+
-                    URLEncoder.encode("mm3" ,"UTF-8")+"="+URLEncoder.encode(mm3 ,"UTF-8")+"&"+
                     URLEncoder.encode("mm4" ,"UTF-8")+"="+URLEncoder.encode(mm4 ,"UTF-8")+"&"+
+                    URLEncoder.encode("mm5" ,"UTF-8")+"="+URLEncoder.encode(mm5 ,"UTF-8")+"&"+
                     URLEncoder.encode("Spinner" ,"UTF-8")+"="+URLEncoder.encode(Spinner ,"UTF-8")+"&"+
-                    URLEncoder.encode("mm6" ,"UTF-8")+"="+URLEncoder.encode(mm6 ,"UTF-8")+"&"+
-                    URLEncoder.encode("mm7" ,"UTF-8")+"="+URLEncoder.encode(a12 ,"UTF-8")+"&"+
-                    URLEncoder.encode("mm8" ,"UTF-8")+"="+URLEncoder.encode(mm8 ,"UTF-8");
+                    URLEncoder.encode("mm7" ,"UTF-8")+"="+URLEncoder.encode(mm7 ,"UTF-8")+"&"+
+                    URLEncoder.encode("Spinner2" ,"UTF-8")+"="+URLEncoder.encode(Spinner2 ,"UTF-8");
             bufferedWriter.write(post_data);
             bufferedWriter.flush();
             bufferedWriter.close();

@@ -100,7 +100,7 @@ public class updateimood extends AppCompatActivity {
     private View.OnClickListener button123 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String result = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood1`='"+mEdtbodya.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
+            String result0 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood1`='"+mEdtbodya.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
             String result1 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood2`='"+mEdtbody1.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
             String result2 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood3`='"+mEdtbody11.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");
             String result3 = MainActivityloginSQL.executeQuery1("UPDATE imood SET `imood4`='"+mEdtbody21.getText().toString()+"' WHERE idid = '"+text1.getText().toString()+"'");

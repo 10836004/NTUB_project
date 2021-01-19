@@ -48,7 +48,7 @@
                     android:layout_marginBottom="20sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/kai08mz"
-                    android:text="將所有的拼圖透過交換移動到正確的位置完成拼圖。"
+                    android:text="將所有的拼圖透過交換移動到正確的位置完成拼圖。如想退出遊戲，請按下該裝置的返回鍵，便可離開遊戲。"
                     android:textColor="#040404"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -102,8 +102,8 @@
 
                 <TextView
                     android:id="@+id/textView79"
-                    android:layout_width="205dp"
-                    android:layout_height="29dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"
                     android:text="開始遊戲"
@@ -125,7 +125,7 @@
 
                 <TextView
                     android:id="@+id/textView60"
-                    android:layout_width="152dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center"

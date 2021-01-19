@@ -65,19 +65,19 @@ public class imood2 extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (mRadioButton1.isChecked()) {
-                a2 = "1 怒氣沖沖失去理智";
+                a2 = "1 非常快樂";
             } else if (mRadioButton2.isChecked()) {
-                a2 = "2 憤怒發脾氣";
+                a2 = "2 興奮";
             } else if (mRadioButton3.isChecked()) {
-                a2 = "3 不高興";
+                a2 = "3 開心";
             } else if (mRadioButton4.isChecked()) {
                 a2 = "4 平靜";
             } else if (mRadioButton5.isChecked()) {
-                a2 = "5 開心";
+                a2 = "5 不高興";
             } else if (mRadioButton6.isChecked()) {
-                a2 = "6 興奮";
+                a2 = "6 憤怒發脾氣";
             } else if (mRadioButton7.isChecked()) {
-                a2 = "7 非常快樂";
+                a2 = "7 怒氣沖沖失去理智";
             }
             /*
             else if (a2 == null) {

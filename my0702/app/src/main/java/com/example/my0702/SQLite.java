@@ -33,7 +33,7 @@ public class SQLite extends AppCompatActivity {
     private Switch sw1;
     private String aa;
     private String a11,a12;
-    private Spinner Spinner;
+    private Spinner Spinner,Spinner1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +48,18 @@ public class SQLite extends AppCompatActivity {
         TextView2 = findViewById(R.id.n2);
         TextView2.setText(loginname1);
         t1 = findViewById(R.id.n3);
-
+        t2 = findViewById(R.id.n4);
         mm1 = findViewById(R.id.name);
         boy = findViewById(R.id.boy);
         girl = findViewById(R.id.girl);
         //mm2 = findViewById(R.id.sex);
-        mm3 = findViewById(R.id.Email1);
+        //mm3 = findViewById(R.id.Email1);
         mm4 = findViewById(R.id.bird);
-        //mm5 = findViewById(R.id.claasss);
+        mm5 = findViewById(R.id.dadage);
 
 
-        Spinner =findViewById(R.id.spinner2);
-        final String[] grade = {"一年級", "二年級", "三年級", "四年級", "五年級", "六年級"};
+        Spinner =findViewById(R.id.sdad);
+        final String[] grade = {"國中", "高中", "大學", "研究所", "碩士", "博士"};
         ArrayAdapter<String> dataAdapter;
 
         dataAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,grade);
@@ -79,19 +79,19 @@ public class SQLite extends AppCompatActivity {
 
                     //Toast.makeText(adapterView.getContext(),"Selected:" + item,Toast.LENGTH_SHORT).show();
 
-                    if(adapterView.getItemAtPosition(i).equals("一年級")) {
-                        t1.setText("一年級");
+                    if(adapterView.getItemAtPosition(i).equals("國中")) {
+                        t1.setText("國中");
 
-                    }else if(adapterView.getItemAtPosition(i).equals("二年級")){
-                        t1.setText("二年級");
-                    }else if(adapterView.getItemAtPosition(i).equals("三年級")){
-                        t1.setText("三年級");
-                    }else if(adapterView.getItemAtPosition(i).equals("四年級")){
-                        t1.setText("四年級");
-                    }else if(adapterView.getItemAtPosition(i).equals("五年級")){
-                        t1.setText("五年級");
-                    }else if(adapterView.getItemAtPosition(i).equals("六年級")){
-                        t1.setText("六年級");
+                    }else if(adapterView.getItemAtPosition(i).equals("高中")){
+                        t1.setText("高中");
+                    }else if(adapterView.getItemAtPosition(i).equals("大學")){
+                        t1.setText("大學");
+                    }else if(adapterView.getItemAtPosition(i).equals("研究所")){
+                        t1.setText("研究所");
+                    }else if(adapterView.getItemAtPosition(i).equals("碩士")){
+                        t1.setText("碩士");
+                    }else if(adapterView.getItemAtPosition(i).equals("博士")){
+                        t1.setText("博士");
                     }
 
                 }
@@ -102,20 +102,68 @@ public class SQLite extends AppCompatActivity {
                 //TODO Auto-generated method stub
             }
         });
-        t1.setText(t1.getText().toString());
 
 
 
-        mm6 = findViewById(R.id.parentname);
+
+        Spinner1 =findViewById(R.id.smom);
+        final String[] grade1 = {"國中", "高中", "大學", "研究所", "碩士", "博士"};
+        ArrayAdapter<String> dataAdapter1;
+
+        dataAdapter1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,grade1);
+
+        dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner1.setPrompt("選擇：");
+        Spinner1.setAdapter(dataAdapter1);
+        Spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if(adapterView.getItemAtPosition(i).equals("選擇")){
+
+                }else{
+                    String item = adapterView.getItemAtPosition(i).toString();
+
+                    //Toast.makeText(adapterView.getContext(),"Selected:" + item,Toast.LENGTH_SHORT).show();
+
+                    if(adapterView.getItemAtPosition(i).equals("國中")) {
+                        t2.setText("國中");
+
+                    }else if(adapterView.getItemAtPosition(i).equals("高中")){
+                        t2.setText("高中");
+                    }else if(adapterView.getItemAtPosition(i).equals("大學")){
+                        t2.setText("大學");
+                    }else if(adapterView.getItemAtPosition(i).equals("研究所")){
+                        t2.setText("研究所");
+                    }else if(adapterView.getItemAtPosition(i).equals("碩士")){
+                        t2.setText("碩士");
+                    }else if(adapterView.getItemAtPosition(i).equals("博士")){
+                        t2.setText("博士");
+                    }
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                //TODO Auto-generated method stub
+            }
+        });
+        t2.setText(t2.getText().toString());
 
 
 
-        //mm7 = findViewById(R.id.nickname);
-        dad = findViewById(R.id.dad);
-        mom = findViewById(R.id.mom);
+        //mm6 = findViewById(R.id.dadage);
 
 
-        mm8 = findViewById(R.id.phone);
+
+        mm7 = findViewById(R.id.momage);
+        //dad = findViewById(R.id.dad);
+        //mom = findViewById(R.id.mom);
+
+
+        //mm8 = findViewById(R.id.phone);
         Button btn1 = findViewById(R.id.btnclass);
         btn1.setOnClickListener(btnAdd1OnClick);
         //TextView2.setText(grade[position]);
@@ -143,16 +191,16 @@ public class SQLite extends AppCompatActivity {
             } else if (girl.isChecked()) {
                 a11 = "女";
             }
-
+/*
             if (mom.isChecked()) {
                 a12 = "媽媽";
             } else if (dad.isChecked()) {
                 a12 = "爸爸";
             }
+*/
 
 
-
-            if ( mm1.getText().toString().matches("")  || mm3.getText().toString().matches("") || mm4.getText().toString().matches("")  || mm6.getText().toString().matches("") || mm8.getText().toString().matches("")) {
+            if ( mm1.getText().toString().matches("")  || mm5.getText().toString().matches("")  || mm7.getText().toString().matches("")) {
 
 
                 Toast toast = Toast.makeText(SQLite.this, "欄位不能是空白!!", Toast.LENGTH_LONG);
@@ -160,16 +208,19 @@ public class SQLite extends AppCompatActivity {
 
             }  else{
                 Intent intent = new Intent(SQLite.this, SQLite_insert.class);
-                intent.putExtra("mmm1", TextView1.getText().toString());        //傳入點選事件之項目
-                intent.putExtra("mmm2", TextView2.getText().toString());
-                intent.putExtra("mm1", mm1.getText().toString());        //傳入點選事件之項目
-                intent.putExtra("a11", a11);
-                intent.putExtra("mm3", mm3.getText().toString());
-                intent.putExtra("mm4", mm4.getText().toString());
-                intent.putExtra("Spinner", t1.getText().toString());
-                intent.putExtra("mm6", mm6.getText().toString());
-                intent.putExtra("a12", a12);
-                intent.putExtra("mm8", mm8.getText().toString());
+                intent.putExtra("mmm1", TextView1.getText().toString());        //帳號
+                intent.putExtra("mmm2", TextView2.getText().toString());        //密碼
+                intent.putExtra("mm1", mm1.getText().toString());        //name
+                intent.putExtra("a11", a11);                            //sex
+                //intent.putExtra("mm3", mm3.getText().toString());
+                intent.putExtra("mm4", mm4.getText().toString());       //birth
+                intent.putExtra("mm5", mm5.getText().toString());       //dadage
+                intent.putExtra("Spinner", t1.getText().toString());    //dadedu
+                intent.putExtra("mm7", mm7.getText().toString());       //momage
+                intent.putExtra("Spinner2", t2.getText().toString());   //momedu
+                //intent.putExtra("mm6", mm6.getText().toString());
+                //intent.putExtra("a12", a12);
+
                 Toast toast = Toast.makeText(SQLite.this, "註冊成功，現在登入帳號使用i好心情吧!!", Toast.LENGTH_LONG);
                 toast.show();
                 startActivity(intent);//跳轉到倒計時頁面

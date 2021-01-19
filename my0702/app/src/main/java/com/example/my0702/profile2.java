@@ -8,13 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class profile2 extends AppCompatActivity {
-    private Button btn1,btnhome;
-    private EditText mEdtkg1,mEdthi, mEdtBMI1, mEdtbody1,mEdtbody11,mEdtbody21,mEdtbody31,mEdtbody41,mEdtbody51,mEdtbody61,mEdtbody71,mEdtbody81,mEdtbody91;
+    private Button btn1,btnhome,buttonupdate;
+    private EditText mEdtkg1,mEdthi, mEdtBMI1, mEdtbody011,mEdtbody012,mEdtbody1,mEdtbody11,mEdtbody21,mEdtbody31,mEdtbody41,mEdtbody51,mEdtbody61,mEdtbody71,mEdtbody81,mEdtbody91;
     private TextView TextView1,text1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +30,17 @@ public class profile2 extends AppCompatActivity {
         TextView1.setText(loginname);
         btnhome= findViewById(R.id.home);
         btnhome.setOnClickListener(buttonhome);
+        buttonupdate= findViewById(R.id.update1234);
+        buttonupdate.setOnClickListener(button123);
+        mEdtbody011 = findViewById(R.id.edtbody411);
+        mEdtbody012 = findViewById(R.id.edtbody412);
         mEdtbody1 = findViewById(R.id.edthi1);
         mEdtbody11= findViewById(R.id.edtkg1);
         mEdtbody21= findViewById(R.id.edtbody1);
         mEdtbody31 = findViewById(R.id.edtbody11);
         mEdtbody41 = findViewById(R.id.edtbody21);
         mEdtbody51 = findViewById(R.id.edtbody31);
-        mEdtbody61 = findViewById(R.id.edtbody41);
+
         mEdtbody71 = findViewById(R.id.edtbody51);
        //text1= findViewById(R.id.textView4);
 
@@ -49,15 +54,15 @@ public class profile2 extends AppCompatActivity {
                 JSONArray jsonArray2 = new JSONArray(result);
                 JSONObject jsonData = jsonArray2.getJSONObject(0);
 
-
+                mEdtbody011.setText( jsonData.getString("id"));;
+                mEdtbody012.setText( jsonData.getString("pwd"));
                 mEdtbody1.setText( jsonData.getString("name"));;
                 mEdtbody11.setText( jsonData.getString("sex"));
-                mEdtbody21.setText( jsonData.getString("Email"));
-                mEdtbody31.setText( jsonData.getString("bird"));
-                mEdtbody41.setText( jsonData.getString("claasss"));
-                mEdtbody51.setText( jsonData.getString("parentname"));
-                mEdtbody61.setText( jsonData.getString("nickname"));
-                mEdtbody71.setText( jsonData.getString("phone"));
+                mEdtbody21.setText( jsonData.getString("birth"));
+                mEdtbody31.setText( jsonData.getString("dadparentsage"));
+                mEdtbody41.setText( jsonData.getString("dadeducation"));
+                mEdtbody51.setText( jsonData.getString("momparentsage"));
+                mEdtbody71.setText( jsonData.getString("momeducation"));
 
 
                       }
@@ -66,6 +71,27 @@ public class profile2 extends AppCompatActivity {
         }
 
     }
+
+    private View.OnClickListener button123 = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            String result0 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `pwd`='"+mEdtbody012.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result1 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `name`='"+mEdtbody1.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result2 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `sex`='"+mEdtbody11.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result3 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `birth`='"+mEdtbody21.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result4 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `dadparentsage`='"+mEdtbody31.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result5 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `dadeducation`='"+mEdtbody41.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result6 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `momparentsage`='"+mEdtbody51.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+            String result7 = MainActivityloginSQL.executeQuery1("UPDATE registered SET `momeducation`='"+mEdtbody71.getText().toString()+"' WHERE id = '"+TextView1.getText().toString()+"'");
+
+
+            Intent intent = new Intent(profile2.this, profile_choice.class);
+            intent.putExtra("account", TextView1.getText().toString());//"姓名:"
+            Toast toast = Toast.makeText(profile2.this, "修改成功", Toast.LENGTH_LONG);
+            toast.show();
+            startActivity(intent);//跳轉到倒計時頁面
+        }
+    };
     private View.OnClickListener buttonhome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -74,6 +100,4 @@ public class profile2 extends AppCompatActivity {
             startActivity(intent);//跳轉到倒計時頁面
         }
     };
-
-
 }

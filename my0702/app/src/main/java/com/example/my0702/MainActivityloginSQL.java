@@ -22,7 +22,7 @@ public class MainActivityloginSQL {
         String result = "";
         try {
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost("https://ntub.dewei.dev/Select_login.php");
+            HttpPost httpPost = new HttpPost("http://140.131.114.154/Select_login.php");
             ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("query_string", query_string));
             httpPost.setEntity(new UrlEncodedFormEntity(params,"UTF-8"));

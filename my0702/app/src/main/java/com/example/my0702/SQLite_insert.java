@@ -30,15 +30,16 @@ public class SQLite_insert extends AppCompatActivity {
         TextView0 .setText(bundle.getString("mmm2"));
         TextView1 .setText(bundle.getString("mm1"));
         TextView2 .setText(bundle.getString("a11"));
-        TextView3 .setText(bundle.getString("mm3"));
-        TextView4 .setText(bundle.getString("mm4"));
+        TextView3 .setText(bundle.getString("mm4"));
+        TextView4 .setText(bundle.getString("mm5"));
         TextView5 .setText(bundle.getString("Spinner"));
-        TextView6 .setText(bundle.getString("mm6"));
-        TextView7 .setText(bundle.getString("a12"));
-        TextView8 .setText(bundle.getString("mm8"));
+        TextView6 .setText(bundle.getString("mm7"));
+        TextView7 .setText(bundle.getString("Spinner2"));
+
+
         String type = "SQLite_insert";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(type,TextView00.getText().toString(),TextView0.getText().toString(),TextView1.getText().toString(),TextView2.getText().toString(),TextView3.getText().toString(),TextView4.getText().toString(),TextView5.getText().toString(),TextView6.getText().toString(),TextView7.getText().toString(),TextView8.getText().toString());
+        backgroundWorker.execute(type,TextView00.getText().toString(),TextView0.getText().toString(),TextView1.getText().toString(),TextView2.getText().toString(),TextView3.getText().toString(),TextView4.getText().toString(),TextView5.getText().toString(),TextView6.getText().toString(),TextView7.getText().toString());
         Intent i = new Intent(SQLite_insert.this, MainActivity2__login.class);
         startActivity(i);
     }
